@@ -33,3 +33,7 @@ text = "Loading..."
 [node name="ResetButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=102994362]
 layout_mode = 2
 text = "Reset Game"
+
+[node name="StudyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1722946624]
+layout_mode = 2
+text = "Study for 1 Hour"
