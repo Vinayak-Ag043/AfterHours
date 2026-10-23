@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cfkk1l0r4glhw"]
+
+[ext_resource type="Script" uid="uid://csftamdv10ieq" path="res://tests/core_test.gd" id="1_s7xjo"]
+
+[node name="CoreTest" type="Control" unique_id=653276416]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7xjo")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=775052284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=679588351]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1116082042]
+layout_mode = 2
+text = "AFTER HOURS - GAME STATE TEST"
+
+[node name="StatsLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1338122469]
+layout_mode = 2
+text = "Loading..."
+
+[node name="ResetButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=102994362]
+layout_mode = 2
+text = "Reset Game"
