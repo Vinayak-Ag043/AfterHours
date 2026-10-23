@@ -21,6 +21,7 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=679588351]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1116082042]
 layout_mode = 2
@@ -37,3 +38,23 @@ text = "Reset Game"
 [node name="StudyButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1722946624]
 layout_mode = 2
 text = "Study for 1 Hour"
+
+[node name="EatButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=135805847]
+layout_mode = 2
+text = "Eat — 30 Minutes"
+
+[node name="SleepButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=876609970]
+layout_mode = 2
+text = "Sleep — 2 Hours"
+
+[node name="BadmintonButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1975292556]
+layout_mode = 2
+text = "Play Badminton — 1 Hour"
+
+[node name="SocializeButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=884819599]
+layout_mode = 2
+text = "Socialize — 30 Minutes"
+
+[node name="WaitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1277343530]
+layout_mode = 2
+text = "Wait — 30 Minutes"
