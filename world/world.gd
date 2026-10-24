@@ -5,8 +5,11 @@ signal activity_requested(activity_id: String)
 
 @export var interaction_distance: float = 1.8
 
+@export var sleep_interaction_distance: float = 2.2
+
 var exploration_enabled: bool = true
 
+@onready var player_bed: StaticBody3D = $HostelRoom/Furniture/PlayerBed
 @onready var player: CharacterBody3D = $Player
 @onready var study_station: StaticBody3D = $StudyStation
 @onready var prompt: Label = $DebugUI/Prompt
@@ -17,13 +20,41 @@ func _ready() -> void:
 	activity_requested.connect(_debug_activity)
 
 
+
 func _process(_delta: float) -> void:
-	prompt.visible = exploration_enabled and _near_study_station()
+	if not exploration_enabled:
+		prompt.hide()
+		return
+
+	if _near_study_station():
+		prompt.text = "Press E to Study"
+		prompt.show()
+
+	elif _near_player_bed():
+		prompt.text = "Press E to Sleep"
+		prompt.show()
+
+	else:
+		prompt.hide()
+
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not exploration_enabled:
 		return
+
+	if event.is_action_pressed("interact"):
+		if _near_study_station():
+			activity_requested.emit("study")
+
+		elif _near_player_bed():
+			activity_requested.emit("sleep")
+
+		else:
+			return
+
+		get_viewport().set_input_as_handled()
+
 
 	if event.is_action_pressed("interact"):
 		if _near_study_station():
@@ -55,3 +86,16 @@ func set_exploration_enabled(enabled: bool) -> void:
 
 func _debug_activity(activity_id: String) -> void:
 	print("ACTIVITY REQUESTED: ", activity_id)
+
+func _near_player_bed() -> bool:
+	var player_pos := Vector2(
+		player.global_position.x,
+		player.global_position.z
+	)
+
+	var bed_pos := Vector2(
+		player_bed.global_position.x,
+		player_bed.global_position.z
+	)
+
+	return player_pos.distance_to(bed_pos) <= sleep_interaction_distance
