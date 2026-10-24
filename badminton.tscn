@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://o2c3molthve3"]
+
+[ext_resource type="Script" uid="uid://8j6mjghmtjws" path="res://minigames/badminton.gd" id="1_d5lsc"]
+
+[node name="ShuttleStrike" type="Node2D" unique_id=1185937566]
+script = ExtResource("1_d5lsc")
