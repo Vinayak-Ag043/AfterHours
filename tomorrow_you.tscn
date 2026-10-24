@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dtkf3bdl4lwrs"]
+
+[ext_resource type="Script" uid="uid://ctgklhrm0aqg7" path="res://tomorrow_you.gd" id="1_31sy6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro8mr"]
+bg_color = Color(0.046483196, 0.112347476, 0.40511164, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="TomorrowYou" type="Control" unique_id=2104439233]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_31sy6")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=132818707]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1071555872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PhonePanel" type="PanelContainer" parent="CenterContainer" unique_id=1468448847]
+custom_minimum_size = Vector2(390, 560)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ro8mr")
+
+[node name="PhoneLayout" type="VBoxContainer" parent="CenterContainer/PhonePanel" unique_id=1198467103]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CloseButton" type="Button" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=729713404]
+layout_mode = 2
+text = "Close Preview"
+
+[node name="ActionLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=739333091]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+text = "Proposed action: —"
+autowrap_mode = 2
+
+[node name="PhoneTitle" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=152553434]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "TOMORROW YOU"
+
+[node name="TimeLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1686896345]
+layout_mode = 2
+text = "Time remaining: —"
+
+[node name="StatsGrid" type="GridContainer" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1454638076]
+layout_mode = 2
+columns = 2
+
+[node name="EnergyBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1283914358]
+layout_mode = 2
+
+[node name="EnergyAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=496970261]
+layout_mode = 2
+
+[node name="FoodBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1867321634]
+layout_mode = 2
+
+[node name="FoodAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1921885621]
+layout_mode = 2
+
+[node name="MoodBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1594089616]
+layout_mode = 2
+
+[node name="MoodAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=550189771]
+layout_mode = 2
+
+[node name="WarningLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1631152493]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+text = "Warnings will appear here"
+autowrap_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=490943911]
+layout_mode = 2
+text = "Confirm Action"

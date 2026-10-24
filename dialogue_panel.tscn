@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bsfvh8jab6ko8"]
+
+[ext_resource type="Script" uid="uid://o5ej2ervreb5" path="res://dialogue_panel.gd" id="1_dk3e1"]
+
+[node name="DialoguePanel" type="Control" unique_id=1623389056]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dk3e1")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=323271955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5137255)
+
+[node name="BottomContainer" type="MarginContainer" parent="." unique_id=38692400]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -260.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="DialogueBox" type="PanelContainer" parent="BottomContainer" unique_id=735503648]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="DialogueLayout" type="VBoxContainer" parent="BottomContainer/DialogueBox" unique_id=2035516610]
+layout_mode = 2
+
+[node name="CharacterName" type="Label" parent="BottomContainer/DialogueBox/DialogueLayout" unique_id=542636039]
+layout_mode = 2
+text = "ROOMMATE"
+
+[node name="DialogueText" type="Label" parent="BottomContainer/DialogueBox/DialogueLayout" unique_id=75872752]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+text = "Bro, I need your help with something. Got a minute?"
+autowrap_mode = 3
+
+[node name="Choices" type="VBoxContainer" parent="BottomContainer/DialogueBox/DialogueLayout" unique_id=121176683]
+layout_mode = 2

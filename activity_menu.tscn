@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bc2njj6o43pou"]
+
+[ext_resource type="Script" uid="uid://ffayynci5chv" path="res://activity_menu.gd" id="1_tmoc6"]
+
+[node name="ActivityMenu" type="Control" unique_id=297958589]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tmoc6")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=52834878]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.30588236, 0.015686275, 0.05490196, 0.74509805)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=377908434]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPanel" type="PanelContainer" parent="CenterContainer" unique_id=1848091984]
+custom_minimum_size = Vector2(460, 480)
+propagate_maximum_size = false
+layout_mode = 2
+
+[node name="MenuLayout" type="VBoxContainer" parent="CenterContainer/MenuPanel" unique_id=788442107]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LocationLabel" type="Label" parent="CenterContainer/MenuPanel/MenuLayout" unique_id=2086092859]
+layout_mode = 2
+text = "YOUR HOSTEL"
+
+[node name="SubtitleLabel" type="Label" parent="CenterContainer/MenuPanel/MenuLayout" unique_id=362297623]
+layout_mode = 2
+text = "Choose your next move"
+
+[node name="ActionList" type="VBoxContainer" parent="CenterContainer/MenuPanel/MenuLayout" unique_id=1560555817]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PreviewButton" type="Button" parent="CenterContainer/MenuPanel/MenuLayout" unique_id=1037636335]
+layout_mode = 2
+text = "Preview in Tomorrow You"
+
+[node name="CancelButton" type="Button" parent="CenterContainer/MenuPanel/MenuLayout" unique_id=1170185802]
+layout_mode = 2
+text = "Cancel"

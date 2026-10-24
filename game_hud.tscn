@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://b2mvqnyie2b2x"]
+
+[ext_resource type="Script" uid="uid://dlebgwopwwoja" path="res://GameHUD.gd" id="1_q4g6c"]
+
+[node name="GameHUD" type="CanvasLayer" unique_id=819013295]
+
+[node name="Root" type="Control" parent="." unique_id=1992435930]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q4g6c")
+
+[node name="MarginContainer" type="MarginContainer" parent="Root" unique_id=1722135874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainLayout" type="VBoxContainer" parent="Root/MarginContainer" unique_id=602650817]
+layout_mode = 2
+
+[node name="TopRow" type="HBoxContainer" parent="Root/MarginContainer/MainLayout" unique_id=1844284723]
+layout_mode = 2
+
+[node name="GameTitle" type="Label" parent="Root/MarginContainer/MainLayout/TopRow" unique_id=1183399681]
+layout_mode = 2
+text = "AFTER HOURS"
+
+[node name="TimeLabel" type="Label" parent="Root/MarginContainer/MainLayout/TopRow" unique_id=27312935]
+layout_mode = 2
+text = "6:00 PM"
+
+[node name="StatsRow" type="HBoxContainer" parent="Root/MarginContainer/MainLayout" unique_id=179377040]
+layout_mode = 2
+
+[node name="EnergyColumn" type="VBoxContainer" parent="Root/MarginContainer/MainLayout/StatsRow" unique_id=1515303413]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/MarginContainer/MainLayout/StatsRow/EnergyColumn" unique_id=1429167966]
+layout_mode = 2
+text = "Energy: 75"
+
+[node name="ProgressBar" type="ProgressBar" parent="Root/MarginContainer/MainLayout/StatsRow/EnergyColumn" unique_id=235433674]
+layout_mode = 2
+value = 75.0
+
+[node name="FoodColumn" type="VBoxContainer" parent="Root/MarginContainer/MainLayout/StatsRow" unique_id=608515851]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/MarginContainer/MainLayout/StatsRow/FoodColumn" unique_id=1468514291]
+layout_mode = 2
+text = "Food: 60"
+
+[node name="ProgressBar" type="ProgressBar" parent="Root/MarginContainer/MainLayout/StatsRow/FoodColumn" unique_id=325865985]
+layout_mode = 2
+value = 60.0
+
+[node name="MoodColumn" type="VBoxContainer" parent="Root/MarginContainer/MainLayout/StatsRow" unique_id=1583059527]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/MarginContainer/MainLayout/StatsRow/MoodColumn" unique_id=1047982197]
+layout_mode = 2
+text = "Mood: 80"
+
+[node name="ProgressBar" type="ProgressBar" parent="Root/MarginContainer/MainLayout/StatsRow/MoodColumn" unique_id=1791928042]
+layout_mode = 2
+value = 80.0
+
+[node name="AssignmentColumn" type="VBoxContainer" parent="Root/MarginContainer/MainLayout/StatsRow" unique_id=862231563]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/MarginContainer/MainLayout/StatsRow/AssignmentColumn" unique_id=2035078260]
+layout_mode = 2
+text = "Assignment: 40%"
+
+[node name="ProgressBar" type="ProgressBar" parent="Root/MarginContainer/MainLayout/StatsRow/AssignmentColumn" unique_id=594915088]
+layout_mode = 2
+value = 40.0
+
+[node name="SleepColumn" type="VBoxContainer" parent="Root/MarginContainer/MainLayout/StatsRow" unique_id=1583232091]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Root/MarginContainer/MainLayout/StatsRow/SleepColumn" unique_id=2099367304]
+layout_mode = 2
+
+[node name="HintLabel" type="Label" parent="Root/MarginContainer/MainLayout" unique_id=2116371616]
+layout_mode = 2
+text = "E — Interact   •   Esc — Close"
