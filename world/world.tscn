@@ -33,6 +33,24 @@ size = Vector3(1.55, 0.22, 3)
 [sub_resource type="BoxMesh" id="BoxMesh_31l8x"]
 size = Vector3(1.2, 0.15, 0.55)
 
+[sub_resource type="BoxMesh" id="BoxMesh_dgxqb"]
+size = Vector3(2.2, 0.2, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pl6wt"]
+size = Vector3(0.15, 0.85, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7e5c"]
+size = Vector3(2.2, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7e5c"]
+size = Vector3(0.7, 0.8, 0.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jbadn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2e1w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqvai"]
+
 [node name="world" type="Node3D" unique_id=1136223292]
 script = ExtResource("1_tcf2h")
 
@@ -151,3 +169,38 @@ mesh = SubResource("BoxMesh_vmyvg")
 [node name="Pillow" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=1829362049]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -1.05)
 mesh = SubResource("BoxMesh_31l8x")
+
+[node name="StudyDesk" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=529213180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.6)
+
+[node name="Tabletop" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=847084760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("BoxMesh_dgxqb")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=232277763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="RightLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=145297115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=708652431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_f7e5c")
+
+[node name="Chair" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1492417564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.3)
+
+[node name="Backrest" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1329614907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
+mesh = SubResource("BoxMesh_f7e5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/Chair" unique_id=1544718967]
+shape = SubResource("BoxShape3D_jbadn")
+
+[node name="Seat" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1675187157]
+mesh = SubResource("BoxMesh_n2e1w")
+
+[node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=7772785]
+mesh = SubResource("BoxMesh_bqvai")

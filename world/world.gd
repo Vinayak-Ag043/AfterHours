@@ -43,6 +43,18 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not exploration_enabled:
 		return
 
+	if event.is_action_pressed("interact") and not event.is_echo():
+		if _near_study_station():
+			activity_requested.emit("study")
+
+		elif _near_player_bed():
+			activity_requested.emit("sleep")
+
+		else:
+			return
+
+		get_viewport().set_input_as_handled()
+
 	if event.is_action_pressed("interact"):
 		if _near_study_station():
 			activity_requested.emit("study")
