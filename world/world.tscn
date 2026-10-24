@@ -53,6 +53,14 @@ size = Vector3(0.7, 0.15, 0.7)
 [sub_resource type="BoxMesh" id="BoxMesh_bqvai"]
 size = Vector3(0.18, 0.55, 0.18)
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5bk7t"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sxkji"]
+radius = 0.35
+height = 1.8
+
 [node name="world" type="Node3D" unique_id=1136223292]
 script = ExtResource("1_tcf2h")
 
@@ -245,3 +253,12 @@ mesh = SubResource("BoxMesh_n2e1w")
 [node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=554516663]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 0)
 mesh = SubResource("BoxMesh_bqvai")
+
+[node name="Roommate" type="StaticBody3D" parent="HostelRoom" unique_id=824645781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1, 0.3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/Roommate" unique_id=809866507]
+mesh = SubResource("CapsuleMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Roommate" unique_id=1617966453]
+shape = SubResource("CapsuleShape3D_sxkji")
