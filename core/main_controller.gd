@@ -3,35 +3,26 @@ extends Node3D
 
 # ==========================================
 # AFTER HOURS - MAIN CONTROLLER
-# Member 1 - Checkpoint 3A
+# Checkpoint 3B.1 - World Integration
 # ==========================================
 
-# Signals used by our teammates' modules.
 signal activity_menu_requested(activity_id: String)
 signal action_completed(result: Dictionary)
 signal preview_ready(result: Dictionary)
 signal minigame_requested(mode: String)
 
-# This temporary interface lets us test integration
-# before Member 2 and Member 3's scenes arrive.
 @export var show_debug_ui: bool = true
 
+var _world: Node3D
 var _status_label: Label
 var _preview_label: Label
 
 
-# ==========================================
-# GAME STARTUP
-# ==========================================
-
 func _ready() -> void:
-	GameState.state_changed.connect(
-		_on_state_changed
-	)
+	GameState.state_changed.connect(_on_state_changed)
+	GameState.game_finished.connect(_on_game_finished)
 
-	GameState.game_finished.connect(
-		_on_game_finished
-	)
+	_connect_world()
 
 	if show_debug_ui:
 		_create_debug_ui()
@@ -39,26 +30,54 @@ func _ready() -> void:
 
 	_run_startup_test()
 
-	print("AFTER HOURS - Main Controller ready!")
+	print("CHECKPOINT 3B: Main Controller ready!")
 
 
 # ==========================================
-# WORLD -> CONTROLLER
+# CONNECT WORLD SIGNAL
 # ==========================================
 
-# Member 2 can call this when the player
-# interacts with a desk, bed or NPC.
+func _connect_world() -> void:
+	_world = get_node_or_null("World") as Node3D
+
+	if _world == null:
+		push_error("WORLD NOT FOUND! Check Main scene tree.")
+		return
+
+	print("PASS: World scene found!")
+
+	if _world.has_signal("activity_requested"):
+		_world.connect(
+			"activity_requested",
+			Callable(self, "request_activity")
+		)
+
+		print("PASS: World interaction signal connected!")
+	else:
+		push_error(
+            "World does not have activity_requested signal!"
+		)
+
+
+# ==========================================
+# HANDLE WORLD INTERACTION
+# ==========================================
+
 func request_activity(activity_id: String) -> void:
-	print("World requested: ", activity_id)
+	print("WORLD REQUESTED ACTIVITY: ", activity_id)
 
 	activity_menu_requested.emit(activity_id)
 
+	if is_instance_valid(_preview_label):
+		_preview_label.text = (
+			"World interaction detected:\n" + activity_id
+		)
+
 
 # ==========================================
-# UI -> CONTROLLER -> GAME STATE
+# ACTIVITY EXECUTION
 # ==========================================
 
-# Member 3's activity menu can call this.
 func choose_activity(
 	activity_id: String,
 	duration_minutes: int
@@ -70,24 +89,16 @@ func choose_activity(
 	)
 
 	if bool(result["valid"]):
-		print(
-			"Activity completed: ",
-			activity_id
-		)
-		print("Changes: ", result["changes"])
+		print("ACTIVITY COMPLETED: ", activity_id)
 	else:
-		print(
-			"Activity rejected: ",
-			result["reason"]
-		)
+		print("REJECTED: ", result["reason"])
 
 	action_completed.emit(result)
-
 	return result
 
 
 # ==========================================
-# TOMORROW YOU -> PREVIEW
+# TOMORROW YOU
 # ==========================================
 
 func request_preview(
@@ -101,16 +112,13 @@ func request_preview(
 	)
 
 	preview_ready.emit(result)
-
 	return result
 
 
 # ==========================================
-# MINIGAME INTEGRATION
+# MINIGAME HOOK
 # ==========================================
 
-# This signal will be wired to Member 4's
-# Assignment Rush scene in a later step.
 func request_minigame(mode: String = "study") -> void:
 	minigame_requested.emit(mode)
 
@@ -124,15 +132,11 @@ func _on_state_changed() -> void:
 
 
 func _on_game_finished(result: Dictionary) -> void:
-	print("")
-	print("===== NIGHT COMPLETE =====")
-	print("Ending: ", result["title"])
-	print("Message: ", result["message"])
-	print("==========================")
+	print("GAME FINISHED: ", result["title"])
 
 
 # ==========================================
-# CREATE TEMPORARY DEBUG INTERFACE
+# DEBUG UI
 # ==========================================
 
 func _create_debug_ui() -> void:
@@ -146,13 +150,11 @@ func _create_debug_ui() -> void:
 	canvas.add_child(panel)
 
 	var content: VBoxContainer = VBoxContainer.new()
-	content.add_theme_constant_override(
-		"separation", 10
-	)
+	content.add_theme_constant_override("separation", 10)
 	panel.add_child(content)
 
 	var heading: Label = Label.new()
-	heading.text = "AFTER HOURS - INTEGRATION TEST"
+	heading.text = "AFTER HOURS - WORLD INTEGRATION"
 	content.add_child(heading)
 
 	_status_label = Label.new()
@@ -161,7 +163,6 @@ func _create_debug_ui() -> void:
 	var study_button: Button = Button.new()
 	study_button.text = "Study - 1 Hour"
 	content.add_child(study_button)
-
 	study_button.pressed.connect(
 		func(): choose_activity("study", 60)
 	)
@@ -169,15 +170,11 @@ func _create_debug_ui() -> void:
 	var preview_button: Button = Button.new()
 	preview_button.text = "Tomorrow You - Preview Study"
 	content.add_child(preview_button)
-
-	preview_button.pressed.connect(
-		_debug_preview_study
-	)
+	preview_button.pressed.connect(_debug_preview_study)
 
 	var wait_button: Button = Button.new()
 	wait_button.text = "Wait - 30 Minutes"
 	content.add_child(wait_button)
-
 	wait_button.pressed.connect(
 		func(): choose_activity("wait", 30)
 	)
@@ -185,18 +182,15 @@ func _create_debug_ui() -> void:
 	var reset_button: Button = Button.new()
 	reset_button.text = "Reset Game"
 	content.add_child(reset_button)
-
-	reset_button.pressed.connect(
-		_debug_reset
-	)
+	reset_button.pressed.connect(_debug_reset)
 
 	_preview_label = Label.new()
-	_preview_label.text = "No prediction yet."
+	_preview_label.text = "Waiting for interaction..."
 	content.add_child(_preview_label)
 
 
 # ==========================================
-# UPDATE TEMPORARY INTERFACE
+# UPDATE HUD
 # ==========================================
 
 func _refresh_debug_ui() -> void:
@@ -210,36 +204,28 @@ func _refresh_debug_ui() -> void:
 		+ "\nEnergy: " + str(state["energy"])
 		+ "\nFood: " + str(state["food"])
 		+ "\nMood: " + str(state["mood"])
-		+ "\nAssignment: "
-		+ str(state["assignment"]) + "%"
-		+ "\nSleep: "
-		+ str(state["sleep_minutes"]) + " min"
+		+ "\nAssignment: " + str(state["assignment"]) + "%"
+		+ "\nSleep: " + str(state["sleep_minutes"]) + " min"
 	)
 
 	if bool(state["is_finished"]):
 		_status_label.text += (
             "\n\nGAME OVER!"
-			+ "\nEnding: "
-			+ str(state["ending"]["title"])
+			+ "\nEnding: " + str(state["ending"]["title"])
 		)
 
 
 # ==========================================
-# DEBUG - TOMORROW YOU
+# DEBUG PREVIEW
 # ==========================================
 
 func _debug_preview_study() -> void:
 	var before: Dictionary = GameState.get_snapshot()
-
-	var result: Dictionary = request_preview(
-		"study",
-		60
-	)
+	var result: Dictionary = request_preview("study", 60)
 
 	if not bool(result["valid"]):
 		_preview_label.text = (
-            "Preview rejected: "
-			+ str(result["reason"])
+			"Preview rejected: " + str(result["reason"])
 		)
 		return
 
@@ -249,38 +235,33 @@ func _debug_preview_study() -> void:
         "TOMORROW YOU PREDICTS:"
 		+ "\nEnergy: " + str(future["energy"])
 		+ "\nFood: " + str(future["food"])
-		+ "\nAssignment: "
-		+ str(future["assignment"]) + "%"
+		+ "\nAssignment: " + str(future["assignment"]) + "%"
 	)
 
 	assert(GameState.get_snapshot() == before)
-
 	print("PASS: Preview did not modify GameState")
 
 
 # ==========================================
-# DEBUG - RESET
+# RESET
 # ==========================================
 
 func _debug_reset() -> void:
 	GameState.reset_game()
-	_preview_label.text = "No prediction yet."
+
+	if is_instance_valid(_preview_label):
+		_preview_label.text = "Waiting for interaction..."
 
 
 # ==========================================
-# AUTOMATIC STARTUP VERIFICATION
+# STARTUP TEST
 # ==========================================
 
 func _run_startup_test() -> void:
 	var before: Dictionary = GameState.get_snapshot()
+	var result: Dictionary = request_preview("study", 60)
 
-	var result: Dictionary = request_preview(
-		"study",
-		60
-	)
-
-	assert(bool(result["valid"]))
 	assert(GameState.get_snapshot() == before)
 
-	print("PASS: Main Controller communicates with GameState")
-	print("PASS: Main Controller preview is read-only")
+	if bool(result["valid"]):
+		print("PASS: Main Controller preview is read-only")
