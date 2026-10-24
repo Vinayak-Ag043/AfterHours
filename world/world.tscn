@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cl3w3365s5gd7"]
+
+[ext_resource type="PackedScene" uid="uid://bkvvk5v0s8f6i" path="res://world/player.tscn" id="1_6xmxd"]
+[ext_resource type="Script" uid="uid://ccd8vp7b85sup" path="res://world/world.gd" id="1_tcf2h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5bk7t"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g312j"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sxkji"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vto41"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vto41"]
+size = Vector3(12, 2.4, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_drthd"]
+size = Vector3(12, 2.4, 0.3)
+
+[node name="world" type="Node3D" unique_id=1136223292]
+script = ExtResource("1_tcf2h")
+
+[node name="ArenaFloor" type="StaticBody3D" parent="." unique_id=1121763994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor" unique_id=1181040345]
+mesh = SubResource("BoxMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor" unique_id=1373174733]
+shape = SubResource("BoxShape3D_g312j")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=308016508]
+transform = Transform3D(0.70710677, -0.4731468, 0.5254827, 0, 0.7431448, 0.6691306, -0.70710677, -0.4731468, 0.5254827, 8, 10, 8)
+projection = 1
+size = 14.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1618074169]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+
+[node name="StudyStation" type="StaticBody3D" parent="." unique_id=377170329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.4, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StudyStation" unique_id=1077943138]
+mesh = SubResource("BoxMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StudyStation" unique_id=464215035]
+shape = SubResource("BoxShape3D_vto41")
+
+[node name="DebugUI" type="CanvasLayer" parent="." unique_id=678507549]
+
+[node name="Prompt" type="Label" parent="DebugUI" unique_id=1186773571]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "Press E to Study"
+
+[node name="Player" parent="." unique_id=73144493 instance=ExtResource("1_6xmxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.8)
+
+[node name="HostelRoom" type="Node3D" parent="." unique_id=1510474396]
+
+[node name="WallBack" type="StaticBody3D" parent="HostelRoom" unique_id=1635601811]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallBack" unique_id=971298769]
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallBack" unique_id=596892713]
+shape = SubResource("BoxShape3D_drthd")
