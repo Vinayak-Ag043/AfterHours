@@ -25,6 +25,9 @@ func show_event(event_data: Dictionary) -> void:
 		var button := Button.new()
 		button.text = str(option.get("text", "Continue"))
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		
+		button.add_theme_font_override("font", preload("uid://cg5x5qspnwuqh"))
+		button.add_theme_font_size_override("font_size", 18)
 
 		var choice_id: String = str(option.get("id", ""))
 		button.pressed.connect(_on_choice_pressed.bind(event_id, choice_id))

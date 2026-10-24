@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://dtkf3bdl4lwrs"]
 
 [ext_resource type="Script" uid="uid://ctgklhrm0aqg7" path="res://tomorrow_you.gd" id="1_31sy6"]
+[ext_resource type="FontFile" uid="uid://cg5x5qspnwuqh" path="res://Internet Friends.ttf" id="2_3nhhy"]
+[ext_resource type="FontFile" uid="uid://ba3foge7pgnqq" path="res://TypoGraphica_demo.otf" id="3_ebewx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro8mr"]
-bg_color = Color(0.046483196, 0.112347476, 0.40511164, 1)
+bg_color = Color(0.18915072, 0.20975345, 0.31998563, 1)
 border_width_left = 20
 border_width_top = 20
 border_width_right = 20
 border_width_bottom = 20
+border_color = Color(0.280024, 0.30622107, 0.45179582, 1)
+border_blend = true
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -29,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 1, 1, 0)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1071555872]
 layout_mode = 1
@@ -49,51 +54,102 @@ theme_override_constants/separation = 16
 
 [node name="CloseButton" type="Button" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=729713404]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 text = "Close Preview"
 
 [node name="ActionLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=739333091]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 text = "Proposed action: —"
 autowrap_mode = 2
 
 [node name="PhoneTitle" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=152553434]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("3_ebewx")
+theme_override_font_sizes/font_size = 45
 text = "TOMORROW YOU"
 
 [node name="TimeLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1686896345]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 text = "Time remaining: —"
 
 [node name="StatsGrid" type="GridContainer" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1454638076]
 layout_mode = 2
-columns = 2
+columns = 3
+
+[node name="StatHeader" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=256278210]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+text = "STAT"
+
+[node name="BeforeHeader" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=593665589]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+theme_override_font_sizes/font_size = 14
+text = "BEFORE"
+
+[node name="AfterHeader" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=799675735]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+theme_override_font_sizes/font_size = 14
+text = "AFTER"
+
+[node name="EnergyName" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=160628158]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+text = "Energy"
 
 [node name="EnergyBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1283914358]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 
 [node name="EnergyAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=496970261]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
+
+[node name="FoodName" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=859114590]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+text = "Food"
 
 [node name="FoodBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1867321634]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 
 [node name="FoodAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1921885621]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
+
+[node name="MoodName" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1619940559]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.69803923, 0.58431375, 0.34509805, 1)
+theme_override_fonts/font = ExtResource("2_3nhhy")
+text = "Mood"
 
 [node name="MoodBefore" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=1594089616]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 
 [node name="MoodAfter" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout/StatsGrid" unique_id=550189771]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 
 [node name="WarningLabel" type="Label" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=1631152493]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 text = "Warnings will appear here"
+vertical_alignment = 3
 autowrap_mode = 2
 
 [node name="ConfirmButton" type="Button" parent="CenterContainer/PhonePanel/PhoneLayout" unique_id=490943911]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3nhhy")
 text = "Confirm Action"
