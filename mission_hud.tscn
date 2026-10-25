@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bb7fn2kkkm8pf"]
+
+[ext_resource type="Script" uid="uid://dl2qavwpciy0o" path="res://mission_hud.gd" id="1_er7jx"]
+
+[node name="MissionHUD" type="CanvasLayer" unique_id=56985449]
+script = ExtResource("1_er7jx")
+
+[node name="Root" type="Control" parent="." unique_id=1187294681]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ObjectivePanel" type="PanelContainer" parent="Root" unique_id=1645689786]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 100.0
+offset_right = 64.0
+offset_bottom = 150.0
+
+[node name="ObjectiveLayout" type="VBoxContainer" parent="Root/ObjectivePanel" unique_id=1752907983]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ObjectiveLabel" type="Label" parent="Root/ObjectivePanel/ObjectiveLayout" unique_id=2030882660]
+layout_mode = 2
+text = "OBJECTIVE: Survive until 7 AM"
+
+[node name="MissionLabel" type="Label" parent="Root/ObjectivePanel/ObjectiveLayout" unique_id=1211471890]
+layout_mode = 2
+text = "ROOMMATE: Not started"
+
+[node name="NotificationPanel" type="PanelContainer" parent="Root" unique_id=1737275242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(250, 24)
+
+[node name="NotificationLabel" type="Label" parent="Root/NotificationPanel" unique_id=1792014936]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Mess closes soon!"
+autowrap_mode = 3
