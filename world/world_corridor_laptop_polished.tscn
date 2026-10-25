@@ -1,0 +1,2343 @@
+[gd_scene format=3 uid="uid://dj882lw3jt2va"]
+
+[ext_resource type="PackedScene" uid="uid://bkvvk5v0s8f6i" path="res://world/player.tscn" id="1_6xmxd"]
+[ext_resource type="Script" uid="uid://ccd8vp7b85sup" path="res://world/world.gd" id="1_tcf2h"]
+[ext_resource type="Script" uid="uid://b1hmue2epsvwo" path="res://world/camera_follow.gd" id="2_4717r"]
+[ext_resource type="Script" uid="uid://b0307s4jqn2l7" path="res://world/world_boundaries.gd" id="4_h5o24"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5o24"]
+albedo_color = Color(0.7254902, 0.5882353, 0.4392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5bk7t"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g312j"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LaptopMetal"]
+albedo_color = Color(0.396078, 0.486275, 0.564706, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopBase"]
+size = Vector3(1.02, 0.1, 0.7)
+
+[sub_resource type="BoxShape3D" id="Polish_Shape_Laptop"]
+size = Vector3(1.02, 0.88, 0.72)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LaptopKeys"]
+albedo_color = Color(0.141176, 0.203922, 0.278431, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopKeyboard"]
+size = Vector3(0.86, 0.013, 0.32)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LaptopHinge"]
+albedo_color = Color(0.603922, 0.686275, 0.72549, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopKeyRow"]
+size = Vector3(0.79, 0.017, 0.03)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LaptopScreenFrame"]
+albedo_color = Color(0.113725, 0.168627, 0.223529, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopTouchpad"]
+size = Vector3(0.33, 0.015, 0.14)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopScreenBack"]
+size = Vector3(1.02, 0.74, 0.075)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LaptopScreen"]
+albedo_color = Color(0.090196, 0.231373, 0.333333, 1)
+emission_enabled = true
+emission = Color(0.090196, 0.231373, 0.333333, 1)
+emission_energy_multiplier = 1.35
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_LaptopScreenFront"]
+size = Vector3(0.88, 0.61, 0.018)
+
+[sub_resource type="CylinderMesh" id="Polish_Mesh_LaptopHinge"]
+top_radius = 0.037
+bottom_radius = 0.037
+height = 0.88
+
+[sub_resource type="StandardMaterial3D" id="Mat_walls"]
+albedo_color = Color(0.839216, 0.772549, 0.67451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vto41"]
+size = Vector3(12, 2.4, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_drthd"]
+size = Vector3(12, 2.4, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="Mat_wood"]
+albedo_color = Color(0.580392, 0.419608, 0.301961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ku3a"]
+size = Vector3(1.7, 0.35, 3.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4717r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgxqb"]
+size = Vector3(1.7, 0.8, 3.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vmyvg"]
+size = Vector3(1.55, 0.22, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_31l8x"]
+size = Vector3(1.2, 0.15, 0.55)
+
+[sub_resource type="StandardMaterial3D" id="Mat_furniture"]
+albedo_color = Color(0.596078, 0.462745, 0.364706, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dgxqb"]
+size = Vector3(2.2, 0.2, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pl6wt"]
+size = Vector3(0.15, 0.85, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7e5c"]
+size = Vector3(2.2, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7e5c"]
+size = Vector3(0.7, 0.8, 0.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jbadn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2e1w"]
+size = Vector3(0.7, 0.15, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqvai"]
+size = Vector3(0.18, 0.55, 0.18)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5bk7t"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sxkji"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_t50cm"]
+size = Vector3(4.8, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i6qog"]
+size = Vector3(4.8, 2, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bk7t"]
+size = Vector3(12, 0.4, 12.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn3g3"]
+albedo_color = Color(0.65882355, 0.60784316, 0.5254902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jbadn"]
+size = Vector3(12, 0.4, 12.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxkji"]
+size = Vector3(8, 0.4, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc4t8"]
+albedo_color = Color(0.7254902, 0.5882353, 0.4392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i6qog"]
+size = Vector3(8, 0.4, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_57uhy"]
+size = Vector3(3, 1, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ow0q"]
+size = Vector3(3, 1, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ku3a"]
+size = Vector3(1.3, 0.8, 1.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ow0q"]
+size = Vector3(1.3, 0.8, 1.3)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_CorridorFloor"]
+albedo_color = Color(0.462745, 0.54902, 0.639216, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pw4i4"]
+size = Vector3(40, 0.4, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gekqj"]
+size = Vector3(40, 0.4, 8)
+
+[sub_resource type="BoxShape3D" id="Polish_Shape_BathGate"]
+size = Vector3(0.36, 2.55, 7.8)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_BathFrame"]
+albedo_color = Color(0.843137, 0.882353, 0.901961, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_BathPost"]
+size = Vector3(0.36, 2.55, 0.35)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_BathHeader"]
+size = Vector3(0.36, 0.4, 7.7)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_BathBars"]
+albedo_color = Color(0.32549, 0.423529, 0.505882, 1)
+
+[sub_resource type="CylinderMesh" id="Polish_Mesh_BathBar"]
+top_radius = 0.055
+bottom_radius = 0.055
+height = 2.2
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_BathRail"]
+size = Vector3(0.14, 0.085, 7.35)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_BathSign"]
+albedo_color = Color(0.145098, 0.27451, 0.360784, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_BathSign"]
+size = Vector3(0.11, 0.58, 3.45)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_DoorHardware"]
+albedo_color = Color(0.956863, 0.839216, 0.631373, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_BathPadlock"]
+size = Vector3(0.22, 0.27, 0.25)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sxkji"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vto41"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmyvg"]
+size = Vector3(1.2, 2.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_DoorWood"]
+albedo_color = Color(0.462745, 0.317647, 0.235294, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorPanel"]
+size = Vector3(1.18, 2.17, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_DoorFrame"]
+albedo_color = Color(0.843137, 0.776471, 0.662745, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorFrameVertical"]
+size = Vector3(0.15, 2.45, 0.28)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorFrameTop"]
+size = Vector3(1.49, 0.16, 0.28)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_DoorInset"]
+albedo_color = Color(0.580392, 0.423529, 0.317647, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorInset"]
+size = Vector3(0.9, 1.65, 0.025)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_Threshold"]
+albedo_color = Color(0.694118, 0.631373, 0.560784, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorThreshold"]
+size = Vector3(1.48, 0.055, 0.47)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_DoorTrim"]
+albedo_color = Color(0.85098, 0.721569, 0.509804, 1)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorPlaque"]
+size = Vector3(0.56, 0.22, 0.045)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorHandlePlate"]
+size = Vector3(0.16, 0.3, 0.045)
+
+[sub_resource type="SphereMesh" id="Polish_Mesh_DoorHandle"]
+radius = 0.082
+height = 0.164
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_DoorAccent"]
+size = Vector3(0.75, 0.065, 0.035)
+
+[sub_resource type="BoxMesh" id="Polish_Mesh_CorridorStripe"]
+size = Vector3(38.3, 0.025, 0.075)
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LightPost"]
+albedo_color = Color(0.270588, 0.337255, 0.423529, 1)
+
+[sub_resource type="CylinderMesh" id="Polish_Mesh_LightPost"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 2.62
+
+[sub_resource type="StandardMaterial3D" id="Polish_Mat_LampGlow"]
+albedo_color = Color(1, 0.894118, 0.682353, 1)
+emission_enabled = true
+emission = Color(1, 0.894118, 0.682353, 1)
+emission_energy_multiplier = 1.8
+
+[sub_resource type="SphereMesh" id="Polish_Mesh_LightGlass"]
+radius = 0.31
+height = 0.62
+
+[sub_resource type="CylinderMesh" id="Polish_Mesh_LightTop"]
+top_radius = 0.33
+bottom_radius = 0.33
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcf2h"]
+albedo_color = Color(0.2784314, 0.4862745, 0.34117648, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jdf6e"]
+size = Vector3(40.8, 0.4, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4717r"]
+size = Vector3(40.8, 0.4, 20)
+
+[sub_resource type="StandardMaterial3D" id="Mat_post"]
+albedo_color = Color(0.32549, 0.380392, 0.415686, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5bk7t"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.6
+
+[sub_resource type="StandardMaterial3D" id="Mat_flag"]
+albedo_color = Color(0.945098, 0.682353, 0.298039, 1)
+
+[sub_resource type="BoxMesh" id="Decor_flagcloth"]
+size = Vector3(1, 0.55, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="Mat_path"]
+albedo_color = Color(0.72549, 0.658824, 0.54902, 1)
+
+[sub_resource type="BoxMesh" id="Decor_road"]
+size = Vector3(38, 0.06, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="Mat_trunk"]
+albedo_color = Color(0.47451, 0.333333, 0.282353, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_trunk"]
+top_radius = 0.25
+bottom_radius = 0.32
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="Mat_leaf_dark"]
+albedo_color = Color(0.211765, 0.478431, 0.27451, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_leavesbottom"]
+top_radius = 0.0
+bottom_radius = 1.3
+height = 2.2
+
+[sub_resource type="StandardMaterial3D" id="Mat_leaf_light"]
+albedo_color = Color(0.301961, 0.6, 0.376471, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_leavestop"]
+top_radius = 0.0
+bottom_radius = 0.95
+height = 1.8
+
+[sub_resource type="CylinderShape3D" id="Decor_trunkcol"]
+height = 1.8
+radius = 0.32
+
+[sub_resource type="BoxMesh" id="Decor_benchseat"]
+size = Vector3(2, 0.15, 0.6)
+
+[sub_resource type="BoxMesh" id="Decor_benchback"]
+size = Vector3(2, 0.8, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_metal"]
+albedo_color = Color(0.258824, 0.278431, 0.301961, 1)
+
+[sub_resource type="BoxMesh" id="Decor_benchsupport"]
+size = Vector3(0.15, 0.65, 0.5)
+
+[sub_resource type="BoxShape3D" id="Decor_benchcol"]
+size = Vector3(2, 1.45, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_bush"]
+albedo_color = Color(0.184314, 0.439216, 0.266667, 1)
+
+[sub_resource type="SphereMesh" id="Decor_bush"]
+radius = 0.6
+height = 0.8
+
+[sub_resource type="CylinderMesh" id="Decor_lamppole"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 3.2
+
+[sub_resource type="StandardMaterial3D" id="Mat_night_lamp"]
+albedo_color = Color(1, 0.882353, 0.65098, 1)
+
+[sub_resource type="SphereMesh" id="Decor_lampglow"]
+radius = 0.24
+height = 0.48
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Stone"]
+albedo_color = Color(0.7411765, 0.6901961, 0.572549, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_Base"]
+size = Vector3(35, 0.48, 4.4)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Cream"]
+albedo_color = Color(0.8627451, 0.8235294, 0.7176471, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_SideWing"]
+size = Vector3(11.4, 4.5, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Stucco"]
+albedo_color = Color(0.9137255, 0.8705882, 0.7803922, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_CentralBlock"]
+size = Vector3(12, 5.35, 3)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Trim"]
+albedo_color = Color(0.9607843, 0.9098039, 0.8078431, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_SideCornice"]
+size = Vector3(11.8, 0.4, 2.9)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_CentreCornice"]
+size = Vector3(13.4, 0.45, 3.5)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Frame"]
+albedo_color = Color(0.9176471, 0.8823529, 0.8078431, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_Pilaster"]
+size = Vector3(0.24, 4.2, 0.35)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_PorticoRoof"]
+size = Vector3(13.2, 0.52, 3.6)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_PorticoFrieze"]
+size = Vector3(12.8, 0.74, 0.35)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_Parapet"]
+size = Vector3(13, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_ColumnBase"]
+size = Vector3(0.76, 0.27, 0.76)
+
+[sub_resource type="CylinderMesh" id="ThomasonMesh_Column"]
+top_radius = 0.24
+bottom_radius = 0.31
+height = 4.0
+radial_segments = 12
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_ColumnCap"]
+size = Vector3(0.83, 0.27, 0.83)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_DarkDoor"]
+albedo_color = Color(0.2078431, 0.1764706, 0.1686275, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_Door"]
+size = Vector3(2.35, 3.3, 0.19)
+
+[sub_resource type="SphereMesh" id="ThomasonMesh_DoorArch"]
+radius = 1.15
+height = 2.3
+radial_segments = 24
+rings = 10
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Step"]
+albedo_color = Color(0.7098039, 0.6666667, 0.5960784, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_StairLarge"]
+size = Vector3(5, 0.18, 0.75)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_StairSmall"]
+size = Vector3(4.3, 0.14, 0.7)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_WindowFrame"]
+size = Vector3(1.4, 2.13, 0.14)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Window"]
+albedo_color = Color(0.1372549, 0.2705882, 0.3568627, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_WindowGlass"]
+size = Vector3(1.15, 1.84, 0.16)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_WindowMullion"]
+size = Vector3(0.08, 1.76, 0.18)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_WindowSill"]
+size = Vector3(1.55, 0.15, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_LitWindow"]
+albedo_color = Color(0.9098039, 0.7647059, 0.5215686, 1)
+emission_enabled = true
+emission = Color(0.7921569, 0.5921569, 0.3254902, 1)
+emission_energy_multiplier = 0.55
+
+[sub_resource type="CylinderMesh" id="ThomasonMesh_Drum"]
+top_radius = 2.25
+bottom_radius = 2.3
+height = 0.66
+radial_segments = 12
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_DomeLip"]
+size = Vector3(5.35, 0.2, 5.35)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Roof"]
+albedo_color = Color(0.7764706, 0.7098039, 0.5921569, 1)
+
+[sub_resource type="SphereMesh" id="ThomasonMesh_Dome"]
+radius = 2.72
+height = 5.44
+radial_segments = 32
+rings = 16
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_ClockTower"]
+size = Vector3(1.75, 1.15, 1.3)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_ClockFace"]
+shading_mode = 0
+albedo_color = Color(1, 0.9686275, 0.8980392, 1)
+
+[sub_resource type="CylinderMesh" id="ThomasonMesh_ClockFace"]
+top_radius = 0.52
+bottom_radius = 0.52
+height = 0.08
+radial_segments = 12
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Hands"]
+albedo_color = Color(0.1882353, 0.2588235, 0.3294118, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_HourHand"]
+size = Vector3(0.07, 0.29, 0.05)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_MinuteHand"]
+size = Vector3(0.07, 0.43, 0.05)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_SpireBase"]
+size = Vector3(0.43, 0.27, 0.43)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_DarkRoof"]
+albedo_color = Color(0.6235294, 0.5843137, 0.5215686, 1)
+
+[sub_resource type="CylinderMesh" id="ThomasonMesh_Spire"]
+top_radius = 0.025
+bottom_radius = 0.19
+height = 0.75
+radial_segments = 12
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Planter"]
+albedo_color = Color(0.6823529, 0.4392157, 0.3372549, 1)
+
+[sub_resource type="BoxMesh" id="ThomasonMesh_Planter"]
+size = Vector3(0.67, 0.48, 0.67)
+
+[sub_resource type="StandardMaterial3D" id="ThomasonMat_Plant"]
+albedo_color = Color(0.2470588, 0.5058824, 0.3490196, 1)
+
+[sub_resource type="SphereMesh" id="ThomasonMesh_Shrub"]
+height = 0.68
+radial_segments = 12
+rings = 6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai45w"]
+albedo_color = Color(0.21568628, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ww2s"]
+size = Vector3(12, 0.4, 18)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5o24"]
+size = Vector3(12, 0.4, 18)
+
+[sub_resource type="StandardMaterial3D" id="Mat_net"]
+albedo_color = Color(0.87451, 0.913725, 0.917647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0m45w"]
+size = Vector3(10.1, 1.1, 0.06)
+
+[sub_resource type="BoxMesh" id="Decor_netpost"]
+size = Vector3(0.12, 2.2, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_court_line"]
+albedo_color = Color(0.909804, 0.941176, 0.913725, 1)
+
+[sub_resource type="BoxMesh" id="Decor_courtline_long"]
+size = Vector3(0.045, 0.025, 17)
+
+[sub_resource type="BoxMesh" id="Decor_courtline_short"]
+size = Vector3(11, 0.025, 0.045)
+
+[sub_resource type="Environment" id="Environment_6megm"]
+background_mode = 1
+background_color = Color(0.09411765, 0.14509805, 0.23921569, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5372549, 0.5921569, 0.70980394, 1)
+ambient_light_energy = 0.35
+
+[sub_resource type="BoxMesh" id="Decor_path"]
+size = Vector3(2.2, 0.18, 3.5)
+
+[sub_resource type="BoxShape3D" id="Decor_pathcol"]
+size = Vector3(2.2, 0.18, 3.5)
+
+[node name="world" type="Node3D" unique_id=1136223292]
+script = ExtResource("1_tcf2h")
+
+[node name="ArenaFloor" type="StaticBody3D" parent="." unique_id=1121763994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor" unique_id=1181040345]
+material_override = SubResource("StandardMaterial3D_h5o24")
+mesh = SubResource("BoxMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor" unique_id=1373174733]
+shape = SubResource("BoxShape3D_g312j")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=308016508]
+transform = Transform3D(1, 0, 0, 0, 0.9285857, 0.37111816, 0, -0.37111813, 0.9285857, 0, 5.154047, 16)
+projection = 1
+size = 18.0
+script = ExtResource("2_4717r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1618074169]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+light_color = Color(0.7019608, 0.7882353, 1, 1)
+light_energy = 0.4
+
+[node name="StudyStation" type="StaticBody3D" parent="." unique_id=377170329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 1, -5.1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StudyStation" unique_id=1077943138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.057, 0.02)
+material_override = SubResource("Polish_Mat_LaptopMetal")
+mesh = SubResource("Polish_Mesh_LaptopBase")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StudyStation" unique_id=464215035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44, -0.02)
+shape = SubResource("Polish_Shape_Laptop")
+
+[node name="Keyboard" type="MeshInstance3D" parent="StudyStation" unique_id=1552567344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.116, -0.02)
+material_override = SubResource("Polish_Mat_LaptopKeys")
+mesh = SubResource("Polish_Mesh_LaptopKeyboard")
+
+[node name="KeysRow1" type="MeshInstance3D" parent="StudyStation" unique_id=1262093379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128, -0.13)
+material_override = SubResource("Polish_Mat_LaptopHinge")
+mesh = SubResource("Polish_Mesh_LaptopKeyRow")
+
+[node name="KeysRow2" type="MeshInstance3D" parent="StudyStation" unique_id=1834679909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128, -0.075)
+material_override = SubResource("Polish_Mat_LaptopHinge")
+mesh = SubResource("Polish_Mesh_LaptopKeyRow")
+
+[node name="KeysRow3" type="MeshInstance3D" parent="StudyStation" unique_id=1312170282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128, -0.02)
+material_override = SubResource("Polish_Mat_LaptopHinge")
+mesh = SubResource("Polish_Mesh_LaptopKeyRow")
+
+[node name="KeysRow4" type="MeshInstance3D" parent="StudyStation" unique_id=930053439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128, 0.035)
+material_override = SubResource("Polish_Mat_LaptopHinge")
+mesh = SubResource("Polish_Mesh_LaptopKeyRow")
+
+[node name="Touchpad" type="MeshInstance3D" parent="StudyStation" unique_id=1793082709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128, 0.235)
+material_override = SubResource("Polish_Mat_LaptopScreenFrame")
+mesh = SubResource("Polish_Mesh_LaptopTouchpad")
+
+[node name="ScreenBack" type="MeshInstance3D" parent="StudyStation" unique_id=1703726343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475, -0.285)
+material_override = SubResource("Polish_Mat_LaptopScreenFrame")
+mesh = SubResource("Polish_Mesh_LaptopScreenBack")
+
+[node name="ScreenGlow" type="MeshInstance3D" parent="StudyStation" unique_id=502101945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48, -0.237)
+material_override = SubResource("Polish_Mat_LaptopScreen")
+mesh = SubResource("Polish_Mesh_LaptopScreenFront")
+
+[node name="LaptopTitle" type="Label3D" parent="StudyStation" unique_id=1995523278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49, -0.224)
+pixel_size = 0.003
+modulate = Color(0.65, 1, 0.93, 1)
+text = "AFTER HOURS"
+font_size = 34
+outline_size = 0
+
+[node name="Hinge" type="MeshInstance3D" parent="StudyStation" unique_id=1457038402]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 0, 0.15, -0.265)
+material_override = SubResource("Polish_Mat_LaptopHinge")
+mesh = SubResource("Polish_Mesh_LaptopHinge")
+
+[node name="DebugUI" type="CanvasLayer" parent="." unique_id=678507549]
+
+[node name="Prompt" type="Label" parent="DebugUI" unique_id=1186773571]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "Press E to Study"
+
+[node name="LocationLabel" type="Label" parent="DebugUI" unique_id=1551427944]
+offset_left = 22.0
+offset_top = 594.0
+offset_right = 261.0
+offset_bottom = 625.0
+theme_override_font_sizes/font_size = 22
+text = "Location: Hostel Room"
+
+[node name="Player" parent="." unique_id=73144493 instance=ExtResource("1_6xmxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.8)
+
+[node name="HostelRoom" type="Node3D" parent="." unique_id=1510474396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="WallBack" type="StaticBody3D" parent="HostelRoom" unique_id=1635601811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -5.85)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallBack" unique_id=971298769]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallBack" unique_id=596892713]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="WallLeft" type="StaticBody3D" parent="HostelRoom" unique_id=632913332]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.85, 1.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallLeft" unique_id=1769163359]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallLeft" unique_id=561548863]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="WallRight" type="StaticBody3D" parent="HostelRoom" unique_id=408924981]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.85, 0.3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallRight" unique_id=1925392399]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallRight" unique_id=878209049]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="Furniture" type="Node3D" parent="HostelRoom" unique_id=1965193714]
+
+[node name="PlayerBed" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1466238589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, -2.9)
+
+[node name="Frame" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=1035043046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("BoxMesh_8ku3a")
+surface_material_override/0 = SubResource("StandardMaterial3D_4717r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=238503021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_dgxqb")
+
+[node name="Mattress" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=692202846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+mesh = SubResource("BoxMesh_vmyvg")
+
+[node name="Pillow" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=548999405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -1.05)
+mesh = SubResource("BoxMesh_31l8x")
+
+[node name="RoommateBed" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1570696394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -2.9)
+
+[node name="Frame" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=1587412602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("BoxMesh_8ku3a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=61391425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_dgxqb")
+
+[node name="Mattress" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=676111629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+mesh = SubResource("BoxMesh_vmyvg")
+
+[node name="Pillow" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=1829362049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -1.05)
+mesh = SubResource("BoxMesh_31l8x")
+
+[node name="StudyDesk" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=529213180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -4.6)
+
+[node name="Tabletop" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=847084760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_furniture")
+mesh = SubResource("BoxMesh_dgxqb")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=232277763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="RightLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=145297115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=708652431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_f7e5c")
+
+[node name="StudyDesk2" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=621022613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -4.6)
+
+[node name="Tabletop" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=1936843816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_furniture")
+mesh = SubResource("BoxMesh_dgxqb")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=323324248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="RightLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=1477594304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=512567883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_f7e5c")
+
+[node name="Chair" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1492417564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -3.3)
+
+[node name="Backrest" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1329614907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
+mesh = SubResource("BoxMesh_f7e5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/Chair" unique_id=1544718967]
+shape = SubResource("BoxShape3D_jbadn")
+
+[node name="Seat" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1675187157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("BoxMesh_n2e1w")
+
+[node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=7772785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 0)
+mesh = SubResource("BoxMesh_bqvai")
+
+[node name="Chair2" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=422081488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -3.3)
+
+[node name="Backrest" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=381613461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
+mesh = SubResource("BoxMesh_f7e5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/Chair2" unique_id=37428290]
+shape = SubResource("BoxShape3D_jbadn")
+
+[node name="Seat" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=764382992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("BoxMesh_n2e1w")
+
+[node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=554516663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 0)
+mesh = SubResource("BoxMesh_bqvai")
+
+[node name="Roommate" type="StaticBody3D" parent="HostelRoom" unique_id=824645781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1, 0.3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/Roommate" unique_id=809866507]
+mesh = SubResource("CapsuleMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Roommate" unique_id=1617966453]
+shape = SubResource("CapsuleShape3D_sxkji")
+
+[node name="WallFrontLeft" type="StaticBody3D" parent="HostelRoom" unique_id=940839173]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallFrontLeft" unique_id=813730332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0.3, 5.85)
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_t50cm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallFrontLeft" unique_id=253296390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0.3, 5.85)
+shape = SubResource("BoxShape3D_i6qog")
+
+[node name="WallFrontRight" type="StaticBody3D" parent="HostelRoom" unique_id=1686337042]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallFrontRight" unique_id=1833588893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0.3, 5.85)
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_t50cm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallFrontRight" unique_id=1042023013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0.3, 5.85)
+shape = SubResource("BoxShape3D_i6qog")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HostelRoom" unique_id=1656394359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0)
+light_color = Color(1, 0.81960785, 0.5411765, 1)
+light_energy = 1.5
+omni_range = 7.964
+
+[node name="CommonArea" type="Node3D" parent="." unique_id=1797975341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.026722, 0, -3.931817)
+
+[node name="CommonFloor" type="StaticBody3D" parent="CommonArea" unique_id=610340498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CommonArea/CommonFloor" unique_id=1602665476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.525)
+shape = SubResource("BoxShape3D_5bk7t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CommonArea/CommonFloor" unique_id=1854525475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5253983)
+material_override = SubResource("StandardMaterial3D_fn3g3")
+mesh = SubResource("BoxMesh_jbadn")
+
+[node name="MessArea" type="Node3D" parent="." unique_id=1160320927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.92785, 0, 12.4)
+
+[node name="MessFloor" type="StaticBody3D" parent="MessArea" unique_id=1672334433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/MessFloor" unique_id=701969995]
+shape = SubResource("BoxShape3D_sxkji")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/MessFloor" unique_id=984261984]
+material_override = SubResource("StandardMaterial3D_sc4t8")
+mesh = SubResource("BoxMesh_i6qog")
+
+[node name="FoodCounter" type="StaticBody3D" parent="MessArea" unique_id=1085994629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.098743)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/FoodCounter" unique_id=418129115]
+mesh = SubResource("BoxMesh_57uhy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/FoodCounter" unique_id=2094123946]
+shape = SubResource("BoxShape3D_2ow0q")
+
+[node name="DiningTable" type="StaticBody3D" parent="MessArea" unique_id=199658085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.4, 9.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/DiningTable" unique_id=596100301]
+shape = SubResource("BoxShape3D_8ku3a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/DiningTable" unique_id=356983634]
+mesh = SubResource("BoxMesh_2ow0q")
+
+[node name="Corridor" type="Node3D" parent="." unique_id=2002900915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3786612)
+
+[node name="CorridorFloor" type="StaticBody3D" parent="Corridor" unique_id=645922143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.108486, -0.2, 12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/CorridorFloor" unique_id=363848730]
+material_override = SubResource("Polish_Mat_CorridorFloor")
+mesh = SubResource("BoxMesh_pw4i4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/CorridorFloor" unique_id=1481911216]
+shape = SubResource("BoxShape3D_gekqj")
+
+[node name="WashroomGate" type="StaticBody3D" parent="Corridor" unique_id=594548296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.68, 0, 12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/WashroomGate" unique_id=1837864892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.275, 0)
+shape = SubResource("Polish_Shape_BathGate")
+
+[node name="LeftPillar" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=98962888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.275, -3.8)
+material_override = SubResource("Polish_Mat_BathFrame")
+mesh = SubResource("Polish_Mesh_BathPost")
+
+[node name="RightPillar" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1241811149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.275, 3.8)
+material_override = SubResource("Polish_Mat_BathFrame")
+mesh = SubResource("Polish_Mesh_BathPost")
+
+[node name="Lintel" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=833375542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42, 0)
+material_override = SubResource("Polish_Mat_BathFrame")
+mesh = SubResource("Polish_Mesh_BathHeader")
+
+[node name="IronBar01" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=2058692584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -3.3)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar02" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=827096072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -2.75)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar03" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=845637311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -2.2)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar04" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1992549839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -1.65)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar05" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1800654842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -1.1)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar06" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=733316154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, -0.55)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar07" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=926262700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 0)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar08" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1384601392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 0.55)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar09" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1030103380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 1.1)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar10" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1920533013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 1.65)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar11" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=1938596133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 2.2)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar12" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=83157602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 2.75)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="IronBar13" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=567909606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14, 3.3)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathBar")
+
+[node name="LowRail" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=123418343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52, 0)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathRail")
+
+[node name="MiddleRail" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=83985348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathRail")
+
+[node name="TopRail" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=992157962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.21, 0)
+material_override = SubResource("Polish_Mat_BathBars")
+mesh = SubResource("Polish_Mesh_BathRail")
+
+[node name="GateSign" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=868354201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 2.18, 0)
+material_override = SubResource("Polish_Mat_BathSign")
+mesh = SubResource("Polish_Mesh_BathSign")
+
+[node name="WashroomText" type="Label3D" parent="Corridor/WashroomGate" unique_id=1746384082]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0.31, 2.18, 0)
+pixel_size = 0.0047
+modulate = Color(0.95, 0.95, 0.9, 1)
+text = "WASHROOM"
+font_size = 55
+outline_size = 0
+
+[node name="GateLock" type="MeshInstance3D" parent="Corridor/WashroomGate" unique_id=980516125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28, 1.3, 0)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_BathPadlock")
+
+[node name="BucketNPC_A" type="StaticBody3D" parent="Corridor" unique_id=2117555692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.52211, 0, 15.214121)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_A" unique_id=1460708629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_A" unique_id=1146291132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_B" type="StaticBody3D" parent="Corridor" unique_id=243388792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.550583, 0, 13.965111)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_B" unique_id=1116980020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_B" unique_id=122070459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_C" type="StaticBody3D" parent="Corridor" unique_id=1210986870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.998495, 0, 15.006826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_C" unique_id=1224570041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_C" unique_id=2128267017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_D" type="StaticBody3D" parent="Corridor" unique_id=560407796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.634123, 0, 15.006826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_D" unique_id=1385827298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_D" unique_id=1685435325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="Door01" type="StaticBody3D" parent="Corridor" unique_id=1446048244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.973927, 1.1, 8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door01" unique_id=830842902]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door01" unique_id=952573204]
+material_override = SubResource("Polish_Mat_DoorWood")
+mesh = SubResource("Polish_Mesh_DoorPanel")
+
+[node name="FrameLeft" type="MeshInstance3D" parent="Corridor/Door01" unique_id=785781468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameRight" type="MeshInstance3D" parent="Corridor/Door01" unique_id=588243029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameTop" type="MeshInstance3D" parent="Corridor/Door01" unique_id=2120166437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameTop")
+
+[node name="Inset" type="MeshInstance3D" parent="Corridor/Door01" unique_id=2028617381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0.096)
+material_override = SubResource("Polish_Mat_DoorInset")
+mesh = SubResource("Polish_Mesh_DoorInset")
+
+[node name="Threshold" type="MeshInstance3D" parent="Corridor/Door01" unique_id=1354943750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.065, 0.14)
+material_override = SubResource("Polish_Mat_Threshold")
+mesh = SubResource("Polish_Mesh_DoorThreshold")
+
+[node name="RoomPlaque" type="MeshInstance3D" parent="Corridor/Door01" unique_id=1435493565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.136)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorPlaque")
+
+[node name="RoomNumber" type="Label3D" parent="Corridor/Door01" unique_id=1595686023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.172)
+pixel_size = 0.0037
+modulate = Color(0.14, 0.2, 0.25, 1)
+text = "H-101"
+font_size = 38
+outline_size = 0
+
+[node name="HandlePlate" type="MeshInstance3D" parent="Corridor/Door01" unique_id=918177359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.13, 0.143)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandlePlate")
+
+[node name="DoorHandle" type="MeshInstance3D" parent="Corridor/Door01" unique_id=595717892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.11, 0.208)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandle")
+
+[node name="DecorativeStripe" type="MeshInstance3D" parent="Corridor/Door01" unique_id=2128957251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62, 0.127)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorAccent")
+
+[node name="Door02" type="StaticBody3D" parent="Corridor" unique_id=1999200232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.819, 1.1, 8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door02" unique_id=1771618371]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1193078408]
+material_override = SubResource("Polish_Mat_DoorWood")
+mesh = SubResource("Polish_Mesh_DoorPanel")
+
+[node name="FrameLeft" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1753177961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameRight" type="MeshInstance3D" parent="Corridor/Door02" unique_id=602588065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameTop" type="MeshInstance3D" parent="Corridor/Door02" unique_id=609255776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameTop")
+
+[node name="Inset" type="MeshInstance3D" parent="Corridor/Door02" unique_id=465525282]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0.096)
+material_override = SubResource("Polish_Mat_DoorInset")
+mesh = SubResource("Polish_Mesh_DoorInset")
+
+[node name="Threshold" type="MeshInstance3D" parent="Corridor/Door02" unique_id=296879536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.065, 0.14)
+material_override = SubResource("Polish_Mat_Threshold")
+mesh = SubResource("Polish_Mesh_DoorThreshold")
+
+[node name="RoomPlaque" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1380333776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.136)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorPlaque")
+
+[node name="RoomNumber" type="Label3D" parent="Corridor/Door02" unique_id=975876722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.172)
+pixel_size = 0.0037
+modulate = Color(0.14, 0.2, 0.25, 1)
+text = "H-102"
+font_size = 38
+outline_size = 0
+
+[node name="HandlePlate" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1906511539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.13, 0.143)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandlePlate")
+
+[node name="DoorHandle" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1976347080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.11, 0.208)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandle")
+
+[node name="DecorativeStripe" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1167904403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62, 0.127)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorAccent")
+
+[node name="Door03" type="StaticBody3D" parent="Corridor" unique_id=1933926173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.906813, 1.1, 8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door03" unique_id=254030550]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door03" unique_id=1299961951]
+material_override = SubResource("Polish_Mat_DoorWood")
+mesh = SubResource("Polish_Mesh_DoorPanel")
+
+[node name="FrameLeft" type="MeshInstance3D" parent="Corridor/Door03" unique_id=579516390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameRight" type="MeshInstance3D" parent="Corridor/Door03" unique_id=990959548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameTop" type="MeshInstance3D" parent="Corridor/Door03" unique_id=941606246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameTop")
+
+[node name="Inset" type="MeshInstance3D" parent="Corridor/Door03" unique_id=1897642915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0.096)
+material_override = SubResource("Polish_Mat_DoorInset")
+mesh = SubResource("Polish_Mesh_DoorInset")
+
+[node name="Threshold" type="MeshInstance3D" parent="Corridor/Door03" unique_id=33876436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.065, 0.14)
+material_override = SubResource("Polish_Mat_Threshold")
+mesh = SubResource("Polish_Mesh_DoorThreshold")
+
+[node name="RoomPlaque" type="MeshInstance3D" parent="Corridor/Door03" unique_id=1278879351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.136)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorPlaque")
+
+[node name="RoomNumber" type="Label3D" parent="Corridor/Door03" unique_id=826320076]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.172)
+pixel_size = 0.0037
+modulate = Color(0.14, 0.2, 0.25, 1)
+text = "H-103"
+font_size = 38
+outline_size = 0
+
+[node name="HandlePlate" type="MeshInstance3D" parent="Corridor/Door03" unique_id=1758270631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.13, 0.143)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandlePlate")
+
+[node name="DoorHandle" type="MeshInstance3D" parent="Corridor/Door03" unique_id=636328264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.11, 0.208)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandle")
+
+[node name="DecorativeStripe" type="MeshInstance3D" parent="Corridor/Door03" unique_id=51698361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62, 0.127)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorAccent")
+
+[node name="Door04" type="StaticBody3D" parent="Corridor" unique_id=1151554098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.188793, 1.1, 8.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door04" unique_id=619138559]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door04" unique_id=285525636]
+material_override = SubResource("Polish_Mat_DoorWood")
+mesh = SubResource("Polish_Mesh_DoorPanel")
+
+[node name="FrameLeft" type="MeshInstance3D" parent="Corridor/Door04" unique_id=245972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameRight" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1961537656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.655, 0.01, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameVertical")
+
+[node name="FrameTop" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1854271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18, 0.035)
+material_override = SubResource("Polish_Mat_DoorFrame")
+mesh = SubResource("Polish_Mesh_DoorFrameTop")
+
+[node name="Inset" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1162206504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025, 0.096)
+material_override = SubResource("Polish_Mat_DoorInset")
+mesh = SubResource("Polish_Mesh_DoorInset")
+
+[node name="Threshold" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1177999752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.065, 0.14)
+material_override = SubResource("Polish_Mat_Threshold")
+mesh = SubResource("Polish_Mesh_DoorThreshold")
+
+[node name="RoomPlaque" type="MeshInstance3D" parent="Corridor/Door04" unique_id=651798065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.136)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorPlaque")
+
+[node name="RoomNumber" type="Label3D" parent="Corridor/Door04" unique_id=682459938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, 0.172)
+pixel_size = 0.0037
+modulate = Color(0.14, 0.2, 0.25, 1)
+text = "H-104"
+font_size = 38
+outline_size = 0
+
+[node name="HandlePlate" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1565507451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.13, 0.143)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandlePlate")
+
+[node name="DoorHandle" type="MeshInstance3D" parent="Corridor/Door04" unique_id=312245691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, -0.11, 0.208)
+material_override = SubResource("Polish_Mat_DoorHardware")
+mesh = SubResource("Polish_Mesh_DoorHandle")
+
+[node name="DecorativeStripe" type="MeshInstance3D" parent="Corridor/Door04" unique_id=1507782947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.62, 0.127)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_DoorAccent")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Corridor" unique_id=1694270322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.84, 15)
+light_color = Color(1, 0.91, 0.78, 1)
+light_energy = 1.95
+omni_range = 11.5
+
+[node name="WalkwayEdgeNorth" type="MeshInstance3D" parent="Corridor" unique_id=937746334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1, 0.022, 8.9)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_CorridorStripe")
+
+[node name="WalkwayEdgeSouth" type="MeshInstance3D" parent="Corridor" unique_id=1403160199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1, 0.022, 15.15)
+material_override = SubResource("Polish_Mat_DoorTrim")
+mesh = SubResource("Polish_Mesh_CorridorStripe")
+
+[node name="CorridorLamp01" type="Node3D" parent="Corridor" unique_id=1294233246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 15.06)
+
+[node name="Post" type="MeshInstance3D" parent="Corridor/CorridorLamp01" unique_id=1618272968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightPost")
+
+[node name="GlowGlobe" type="MeshInstance3D" parent="Corridor/CorridorLamp01" unique_id=1646152889]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74, 0)
+material_override = SubResource("Polish_Mat_LampGlow")
+mesh = SubResource("Polish_Mesh_LightGlass")
+
+[node name="Crown" type="MeshInstance3D" parent="Corridor/CorridorLamp01" unique_id=534314682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightTop")
+
+[node name="Light" type="OmniLight3D" parent="Corridor/CorridorLamp01" unique_id=1804462233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84, 0)
+light_color = Color(1, 0.91, 0.78, 1)
+light_energy = 1.95
+omni_range = 11.5
+
+[node name="CorridorLamp02" type="Node3D" parent="Corridor" unique_id=252215784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 15.06)
+
+[node name="Post" type="MeshInstance3D" parent="Corridor/CorridorLamp02" unique_id=964892761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightPost")
+
+[node name="GlowGlobe" type="MeshInstance3D" parent="Corridor/CorridorLamp02" unique_id=499725575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74, 0)
+material_override = SubResource("Polish_Mat_LampGlow")
+mesh = SubResource("Polish_Mesh_LightGlass")
+
+[node name="Crown" type="MeshInstance3D" parent="Corridor/CorridorLamp02" unique_id=525465809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightTop")
+
+[node name="CorridorLamp03" type="Node3D" parent="Corridor" unique_id=1393703088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 15.06)
+
+[node name="Post" type="MeshInstance3D" parent="Corridor/CorridorLamp03" unique_id=1791994796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightPost")
+
+[node name="GlowGlobe" type="MeshInstance3D" parent="Corridor/CorridorLamp03" unique_id=1222413540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74, 0)
+material_override = SubResource("Polish_Mat_LampGlow")
+mesh = SubResource("Polish_Mesh_LightGlass")
+
+[node name="Crown" type="MeshInstance3D" parent="Corridor/CorridorLamp03" unique_id=342797252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightTop")
+
+[node name="Light" type="OmniLight3D" parent="Corridor/CorridorLamp03" unique_id=651349073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84, 0)
+light_color = Color(1, 0.91, 0.78, 1)
+light_energy = 1.95
+omni_range = 11.5
+
+[node name="CorridorLamp04" type="Node3D" parent="Corridor" unique_id=1932512738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 15.06)
+
+[node name="Post" type="MeshInstance3D" parent="Corridor/CorridorLamp04" unique_id=1718271749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightPost")
+
+[node name="GlowGlobe" type="MeshInstance3D" parent="Corridor/CorridorLamp04" unique_id=1078256250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74, 0)
+material_override = SubResource("Polish_Mat_LampGlow")
+mesh = SubResource("Polish_Mesh_LightGlass")
+
+[node name="Crown" type="MeshInstance3D" parent="Corridor/CorridorLamp04" unique_id=1381745324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightTop")
+
+[node name="Light" type="OmniLight3D" parent="Corridor/CorridorLamp04" unique_id=595769669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84, 0)
+light_color = Color(1, 0.91, 0.78, 1)
+light_energy = 1.95
+omni_range = 11.5
+
+[node name="CorridorLamp05" type="Node3D" parent="Corridor" unique_id=1273373707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 15.06)
+
+[node name="Post" type="MeshInstance3D" parent="Corridor/CorridorLamp05" unique_id=1583213292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightPost")
+
+[node name="GlowGlobe" type="MeshInstance3D" parent="Corridor/CorridorLamp05" unique_id=2136249673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74, 0)
+material_override = SubResource("Polish_Mat_LampGlow")
+mesh = SubResource("Polish_Mesh_LightGlass")
+
+[node name="Crown" type="MeshInstance3D" parent="Corridor/CorridorLamp05" unique_id=1415056505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99, 0)
+material_override = SubResource("Polish_Mat_LightPost")
+mesh = SubResource("Polish_Mesh_LightTop")
+
+[node name="Light" type="OmniLight3D" parent="Corridor/CorridorLamp05" unique_id=1797766452]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.84, 0)
+light_color = Color(1, 0.91, 0.78, 1)
+light_energy = 1.95
+omni_range = 11.5
+
+[node name="ThomsonLawn" type="Node3D" parent="." unique_id=2128105543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.346684, 0, 11.223869)
+
+[node name="LawnFloor" type="StaticBody3D" parent="ThomsonLawn" unique_id=1431890206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ThomsonLawn/LawnFloor" unique_id=1925618070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.846, 0, 0)
+material_override = SubResource("StandardMaterial3D_tcf2h")
+mesh = SubResource("BoxMesh_jdf6e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/LawnFloor" unique_id=1178176486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.845, 0, 0)
+shape = SubResource("BoxShape3D_4717r")
+
+[node name="LawnInteractionPoint" type="Node3D" parent="ThomsonLawn" unique_id=1486960870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.85, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ThomsonLawn/LawnInteractionPoint" unique_id=1895148536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("CylinderMesh_5bk7t")
+
+[node name="FlagCloth" type="MeshInstance3D" parent="ThomsonLawn/LawnInteractionPoint" unique_id=1114809212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.25, 0)
+material_override = SubResource("Mat_flag")
+mesh = SubResource("Decor_flagcloth")
+
+[node name="LawnRoad" type="MeshInstance3D" parent="ThomsonLawn" unique_id=1607683125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.85, 0.04, 0)
+material_override = SubResource("Mat_path")
+mesh = SubResource("Decor_road")
+
+[node name="GardenDecor" type="Node3D" parent="ThomsonLawn" unique_id=1194872811]
+
+[node name="Tree01" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1782142536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=50720607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=2064523446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=597878794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=1329460106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree02" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1533569803]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=774783443]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=1998391128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=1601456259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=412053195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree03" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1338421535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1704972403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=382579786]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1839359029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1841103526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree04" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=420009520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=600007816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=1818095412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=1950626432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=634078685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="GardenBench01" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=300124862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 4)
+
+[node name="Seat" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=152448464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchseat")
+
+[node name="Backrest" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=514711138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0.3)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchback")
+
+[node name="LeftSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=879177094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="RightSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=802857775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=447667392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0.1)
+shape = SubResource("Decor_benchcol")
+
+[node name="GardenBench02" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=77711515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -4)
+
+[node name="Seat" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=1206388096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchseat")
+
+[node name="Backrest" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=1351347784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0.3)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchback")
+
+[node name="LeftSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=2016157752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="RightSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=1669142850]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=1339094835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0.1)
+shape = SubResource("Decor_benchcol")
+
+[node name="Bush01" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=980644919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.4, 5)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush02" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=1375729532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.4, -7)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush03" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=1170397657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.4, 5)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush04" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=595620787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.4, 6)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush05" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=691711373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.4, -4)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="LawnLamp01" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=200839650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=483449698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=570081916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=16432190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="LawnLamp02" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=1890271748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=847355270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=357258511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=307624186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="LawnLamp03" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=701152251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=784846924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=1985429972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=1952856548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="ThomsonBackdrop" type="Node3D" parent="ThomsonLawn" unique_id=1425591334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.85, 0, -12.7)
+
+[node name="BuildingShell" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=112992083]
+
+[node name="StoneFoundation" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=563174687]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, -0.2)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_Base")
+
+[node name="LeftWing" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=2133572362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.35, 2.45, -0.45)
+material_override = SubResource("ThomasonMat_Cream")
+mesh = SubResource("ThomasonMesh_SideWing")
+
+[node name="RightWing" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=2054025431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.35, 2.45, -0.45)
+material_override = SubResource("ThomasonMat_Cream")
+mesh = SubResource("ThomasonMesh_SideWing")
+
+[node name="MainHall" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=381849302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.88, -0.55)
+material_override = SubResource("ThomasonMat_Stucco")
+mesh = SubResource("ThomasonMesh_CentralBlock")
+
+[node name="LeftCornice" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=1863145511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.35, 4.86, -0.4)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_SideCornice")
+
+[node name="RightCornice" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=1569728427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.35, 4.86, -0.4)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_SideCornice")
+
+[node name="CentralRoof" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=585243971]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.53, -0.55)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_CentreCornice")
+
+[node name="LeftPilaster" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=212506946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8, 2.48, 0.9)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_Pilaster")
+
+[node name="RightPilaster" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/BuildingShell" unique_id=495925259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8, 2.48, 0.9)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_Pilaster")
+
+[node name="Portico" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=995262276]
+
+[node name="Roof" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=827950645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.14, 1.95)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_PorticoRoof")
+
+[node name="NameBand" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=2120140059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.44, 3.86)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_PorticoFrieze")
+
+[node name="TopTrim" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=912075218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.83, 1.95)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Parapet")
+
+[node name="Column01" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=749436119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column01" unique_id=680840884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column01" unique_id=26524023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column01" unique_id=513315033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="Column02" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=49342542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column02" unique_id=862075455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column02" unique_id=1349996040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column02" unique_id=1255885141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="Column03" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=1505190548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column03" unique_id=1717040094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column03" unique_id=2024388395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column03" unique_id=1636779386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="Column04" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=360316637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column04" unique_id=1953720573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column04" unique_id=1904342315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column04" unique_id=578076818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="Column05" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=388842192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column05" unique_id=837887608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column05" unique_id=1930004447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column05" unique_id=1634448707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="Column06" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=101115968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15, 0, 3.08)
+
+[node name="Foot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column06" unique_id=677184924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnBase")
+
+[node name="Shaft" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column06" unique_id=1336535623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.54, 0)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_Column")
+
+[node name="Capital" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Portico/Column06" unique_id=798440079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.66, 0)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_ColumnCap")
+
+[node name="BuildingName" type="Label3D" parent="ThomsonLawn/ThomsonBackdrop/Portico" unique_id=45622515]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.45, 4.07)
+pixel_size = 0.0065
+modulate = Color(0.1607843, 0.2235294, 0.2666667, 1)
+text = "JAMES THOMASON BUILDING"
+font_size = 48
+outline_size = 0
+
+[node name="Entrance" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=652022798]
+
+[node name="ArchedDoor" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Entrance" unique_id=919888257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.76, 1.035)
+material_override = SubResource("ThomasonMat_DarkDoor")
+mesh = SubResource("ThomasonMesh_Door")
+
+[node name="ArchedDoorTop" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Entrance" unique_id=1291159111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.36, 1.04)
+material_override = SubResource("ThomasonMat_DarkDoor")
+mesh = SubResource("ThomasonMesh_DoorArch")
+
+[node name="Step01" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Entrance" unique_id=516778888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16, 4.72)
+material_override = SubResource("ThomasonMat_Step")
+mesh = SubResource("ThomasonMesh_StairLarge")
+
+[node name="Step02" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/Entrance" unique_id=1618273582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 4.03)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_StairSmall")
+
+[node name="WingWindows" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=1996777848]
+
+[node name="Window01" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=435232888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window01" unique_id=526471807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window01" unique_id=1290366263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_Window")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window01" unique_id=2062265018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window01" unique_id=696016604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window02" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=1248344705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window02" unique_id=908633051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window02" unique_id=1838601307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_LitWindow")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window02" unique_id=1420331406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window02" unique_id=1214109032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window03" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=1619773856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window03" unique_id=1821691506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window03" unique_id=125488566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_Window")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window03" unique_id=1029075801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window03" unique_id=733732511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window04" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=771039449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window04" unique_id=336005602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window04" unique_id=1201796433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_LitWindow")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window04" unique_id=688489888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window04" unique_id=1550880943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window05" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=562214058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window05" unique_id=910137785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window05" unique_id=342518742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_LitWindow")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window05" unique_id=2051018903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window05" unique_id=936335142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window06" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=793789769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window06" unique_id=1443381930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window06" unique_id=127776718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_Window")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window06" unique_id=129467984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window06" unique_id=1465229462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window07" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=337439080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window07" unique_id=388846238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window07" unique_id=243823349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_LitWindow")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window07" unique_id=1050243955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window07" unique_id=1852604560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="Window08" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows" unique_id=940475716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7, 2.35, 0.86)
+
+[node name="StoneFrame" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window08" unique_id=1935434885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowFrame")
+
+[node name="Glass" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window08" unique_id=2005366343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.17)
+material_override = SubResource("ThomasonMat_Window")
+mesh = SubResource("ThomasonMesh_WindowGlass")
+
+[node name="VerticalMullion" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window08" unique_id=2023943453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.27)
+material_override = SubResource("ThomasonMat_Frame")
+mesh = SubResource("ThomasonMesh_WindowMullion")
+
+[node name="Sill" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/WingWindows/Window08" unique_id=274827332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.11, 0.23)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_WindowSill")
+
+[node name="DomeClock" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=834314884]
+
+[node name="DomeDrum" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=1751535699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.08, -0.88)
+material_override = SubResource("ThomasonMat_Stone")
+mesh = SubResource("ThomasonMesh_Drum")
+
+[node name="DomeRim" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=414733002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.45, -0.88)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_DomeLip")
+
+[node name="MainDome" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=549567684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.73, -0.88)
+material_override = SubResource("ThomasonMat_Roof")
+mesh = SubResource("ThomasonMesh_Dome")
+
+[node name="ClockHousing" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=992543595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.44, -0.48)
+material_override = SubResource("ThomasonMat_Stucco")
+mesh = SubResource("ThomasonMesh_ClockTower")
+
+[node name="ClockDial" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=821762153]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 9.48, 0.22)
+material_override = SubResource("ThomasonMat_ClockFace")
+mesh = SubResource("ThomasonMesh_ClockFace")
+
+[node name="HourHand" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=884563139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 9.57, 0.296)
+material_override = SubResource("ThomasonMat_Hands")
+mesh = SubResource("ThomasonMesh_HourHand")
+
+[node name="MinuteHand" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=491120360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 9.6, 0.299)
+material_override = SubResource("ThomasonMat_Hands")
+mesh = SubResource("ThomasonMesh_MinuteHand")
+
+[node name="SpirePlinth" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=910395814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.15, -0.48)
+material_override = SubResource("ThomasonMat_Trim")
+mesh = SubResource("ThomasonMesh_SpireBase")
+
+[node name="ClockSpire" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/DomeClock" unique_id=731526709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.65, -0.48)
+material_override = SubResource("ThomasonMat_DarkRoof")
+mesh = SubResource("ThomasonMesh_Spire")
+
+[node name="FrontPlanters" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=348485064]
+
+[node name="Pot01" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=1539011800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot01" unique_id=1207337882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot01" unique_id=524280045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="Pot02" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=1424664047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot02" unique_id=16285446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot02" unique_id=1690261694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="Pot03" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=555519939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.55, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot03" unique_id=1282649184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot03" unique_id=2101380819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="Pot04" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=27234183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.55, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot04" unique_id=1500014772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot04" unique_id=463243810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="Pot05" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=435462065]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot05" unique_id=223511631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot05" unique_id=1531425066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="Pot06" type="Node3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters" unique_id=775259718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 2.06)
+
+[node name="Pot" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot06" unique_id=1625405760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28, 0)
+material_override = SubResource("ThomasonMat_Planter")
+mesh = SubResource("ThomasonMesh_Planter")
+
+[node name="Shrub" type="MeshInstance3D" parent="ThomsonLawn/ThomsonBackdrop/FrontPlanters/Pot06" unique_id=888878814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, 0)
+material_override = SubResource("ThomasonMat_Plant")
+mesh = SubResource("ThomasonMesh_Shrub")
+
+[node name="EntryLightLeft" type="OmniLight3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=1122586431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 3.2, 4)
+light_color = Color(1, 0.8352941, 0.6039216, 1)
+light_energy = 0.75
+omni_range = 8.0
+
+[node name="EntryLightRight" type="OmniLight3D" parent="ThomsonLawn/ThomsonBackdrop" unique_id=661887758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 3.2, 4)
+light_color = Color(1, 0.8352941, 0.6039216, 1)
+light_energy = 0.75
+omni_range = 8.0
+
+[node name="BadmintonCourt" type="Node3D" parent="." unique_id=1290905047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.70783, 0, 10.850781)
+
+[node name="CourtFloor" type="StaticBody3D" parent="BadmintonCourt" unique_id=659825147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BadmintonCourt/CourtFloor" unique_id=765991861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7523441, 0, 0)
+material_override = SubResource("StandardMaterial3D_ai45w")
+mesh = SubResource("BoxMesh_7ww2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BadmintonCourt/CourtFloor" unique_id=1147965823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.752, 0, 0)
+shape = SubResource("BoxShape3D_h5o24")
+
+[node name="BadmintonInteractionPoint" type="Node3D" parent="BadmintonCourt" unique_id=966166908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=745922394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0)
+material_override = SubResource("Mat_net")
+mesh = SubResource("BoxMesh_0m45w")
+
+[node name="LeftPost" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=1440372028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15, 1.1, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("Decor_netpost")
+
+[node name="RightPost" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=28650660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15, 1.1, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("Decor_netpost")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="BadmintonCourt" unique_id=322495255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.69146, 0, -4.676737)
+light_color = Color(0.8627451, 0.92156863, 1, 1)
+light_energy = 1.952
+omni_range = 12.915
+
+[node name="CourtMarkings" type="Node3D" parent="BadmintonCourt" unique_id=561587457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.752, 0.025, 0)
+
+[node name="LineLeft" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=1191033866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45, 0, 0)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineLeft2" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=1778702340]
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineRight" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=71663546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0, 0)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineTop" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=782117218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.45)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="LineBottom" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=761456949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.45)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="LineMid" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=2120153196]
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="WorldBoundaries" type="Node3D" parent="." unique_id=1394560856]
+script = ExtResource("4_h5o24")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=657647596]
+environment = SubResource("Environment_6megm")
+
+[node name="CourtPath" type="StaticBody3D" parent="." unique_id=1837041372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.5, -0.07, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CourtPath" unique_id=492643519]
+material_override = SubResource("Mat_path")
+mesh = SubResource("Decor_path")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CourtPath" unique_id=972300660]
+shape = SubResource("Decor_pathcol")

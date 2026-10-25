@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c5focxtwc0yfo"]
+
+[ext_resource type="Script" uid="uid://cxllicjd01oxb" path="res://minigames/assignment.gd" id="1_vqj47"]
+[ext_resource type="Texture2D" uid="uid://bpsig2qcx61e8" path="res://minigames/assets/Syntax Error - Copy.jpeg" id="2_x7bu1"]
+
+[node name="AssugnmentRush" type="Control" unique_id=1060610729]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqj47")
+puzzle_image = ExtResource("2_x7bu1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=942949550]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer" unique_id=1953110125]
+layout_mode = 2
+text = "ASSIGNMENT RUSH"
+
+[node name="InstructionLabel" type="Label" parent="VBoxContainer" unique_id=1171621397]
+layout_mode = 2
+text = "Restore the original picture!"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1733779484]
+layout_mode = 2
+columns = 3
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer" unique_id=739338264]
+layout_mode = 2
+text = "Moves: 0"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=479699477]
+layout_mode = 2
+text = "Restart Puzzle "
