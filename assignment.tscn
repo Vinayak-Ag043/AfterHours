@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5focxtwc0yfo"]
 
 [ext_resource type="Script" uid="uid://cxllicjd01oxb" path="res://minigames/assignment.gd" id="1_vqj47"]
-[ext_resource type="Texture2D" uid="uid://bpsig2qcx61e8" path="res://minigames/assets/Syntax Error - Copy.jpeg" id="2_x7bu1"]
+[ext_resource type="Texture2D" uid="uid://cukkijmm15ei7" path="res://minigames/assets/Syntax Error - Copy.jpeg" id="2_x7bu1"]
 
 [node name="AssugnmentRush" type="Control" unique_id=1060610729]
 layout_mode = 3
