@@ -1,0 +1,1002 @@
+[gd_scene format=3 uid="uid://xbbj6srl6ja"]
+
+[ext_resource type="PackedScene" uid="uid://bkvvk5v0s8f6i" path="res://world/player.tscn" id="1_6xmxd"]
+[ext_resource type="Script" uid="uid://ccd8vp7b85sup" path="res://world/world.gd" id="1_tcf2h"]
+[ext_resource type="Script" uid="uid://b1hmue2epsvwo" path="res://world/camera_follow.gd" id="2_4717r"]
+[ext_resource type="Script" uid="uid://b0307s4jqn2l7" path="res://world/world_boundaries.gd" id="4_h5o24"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5o24"]
+albedo_color = Color(0.7254902, 0.5882353, 0.4392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5bk7t"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g312j"]
+size = Vector3(12, 0.4, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sxkji"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vto41"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_walls"]
+albedo_color = Color(0.839216, 0.772549, 0.67451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vto41"]
+size = Vector3(12, 2.4, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_drthd"]
+size = Vector3(12, 2.4, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="Mat_wood"]
+albedo_color = Color(0.580392, 0.419608, 0.301961, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8ku3a"]
+size = Vector3(1.7, 0.35, 3.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4717r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgxqb"]
+size = Vector3(1.7, 0.8, 3.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vmyvg"]
+size = Vector3(1.55, 0.22, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_31l8x"]
+size = Vector3(1.2, 0.15, 0.55)
+
+[sub_resource type="StandardMaterial3D" id="Mat_furniture"]
+albedo_color = Color(0.596078, 0.462745, 0.364706, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dgxqb"]
+size = Vector3(2.2, 0.2, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pl6wt"]
+size = Vector3(0.15, 0.85, 0.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7e5c"]
+size = Vector3(2.2, 1, 0.9)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7e5c"]
+size = Vector3(0.7, 0.8, 0.12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jbadn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n2e1w"]
+size = Vector3(0.7, 0.15, 0.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bqvai"]
+size = Vector3(0.18, 0.55, 0.18)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5bk7t"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sxkji"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_t50cm"]
+size = Vector3(4.8, 0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i6qog"]
+size = Vector3(4.8, 2, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5bk7t"]
+size = Vector3(12, 0.4, 12.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fn3g3"]
+albedo_color = Color(0.65882355, 0.60784316, 0.5254902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jbadn"]
+size = Vector3(12, 0.4, 12.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxkji"]
+size = Vector3(8, 0.4, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sc4t8"]
+albedo_color = Color(0.7254902, 0.5882353, 0.4392157, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i6qog"]
+size = Vector3(8, 0.4, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_57uhy"]
+size = Vector3(3, 1, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ow0q"]
+size = Vector3(3, 1, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ku3a"]
+size = Vector3(1.3, 0.8, 1.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ow0q"]
+size = Vector3(1.3, 0.8, 1.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmdvd"]
+albedo_color = Color(0.39607844, 0.48235294, 0.5686275, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pw4i4"]
+size = Vector3(40, 0.4, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gekqj"]
+size = Vector3(40, 0.4, 8)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_sxkji"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vto41"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vmyvg"]
+size = Vector3(1.2, 2.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gekqj"]
+size = Vector3(1.2, 2.2, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcf2h"]
+albedo_color = Color(0.2784314, 0.4862745, 0.34117648, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jdf6e"]
+size = Vector3(40.8, 0.4, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4717r"]
+size = Vector3(40.8, 0.4, 20)
+
+[sub_resource type="StandardMaterial3D" id="Mat_post"]
+albedo_color = Color(0.32549, 0.380392, 0.415686, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5bk7t"]
+top_radius = 0.06
+bottom_radius = 0.06
+height = 2.6
+
+[sub_resource type="StandardMaterial3D" id="Mat_flag"]
+albedo_color = Color(0.945098, 0.682353, 0.298039, 1)
+
+[sub_resource type="BoxMesh" id="Decor_flagcloth"]
+size = Vector3(1, 0.55, 0.06)
+
+[sub_resource type="StandardMaterial3D" id="Mat_path"]
+albedo_color = Color(0.72549, 0.658824, 0.54902, 1)
+
+[sub_resource type="BoxMesh" id="Decor_road"]
+size = Vector3(38, 0.06, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="Mat_trunk"]
+albedo_color = Color(0.47451, 0.333333, 0.282353, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_trunk"]
+top_radius = 0.25
+bottom_radius = 0.32
+height = 1.8
+
+[sub_resource type="StandardMaterial3D" id="Mat_leaf_dark"]
+albedo_color = Color(0.211765, 0.478431, 0.27451, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_leavesbottom"]
+top_radius = 0.0
+bottom_radius = 1.3
+height = 2.2
+
+[sub_resource type="StandardMaterial3D" id="Mat_leaf_light"]
+albedo_color = Color(0.301961, 0.6, 0.376471, 1)
+
+[sub_resource type="CylinderMesh" id="Decor_leavestop"]
+top_radius = 0.0
+bottom_radius = 0.95
+height = 1.8
+
+[sub_resource type="CylinderShape3D" id="Decor_trunkcol"]
+height = 1.8
+radius = 0.32
+
+[sub_resource type="BoxMesh" id="Decor_benchseat"]
+size = Vector3(2, 0.15, 0.6)
+
+[sub_resource type="BoxMesh" id="Decor_benchback"]
+size = Vector3(2, 0.8, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_metal"]
+albedo_color = Color(0.258824, 0.278431, 0.301961, 1)
+
+[sub_resource type="BoxMesh" id="Decor_benchsupport"]
+size = Vector3(0.15, 0.65, 0.5)
+
+[sub_resource type="BoxShape3D" id="Decor_benchcol"]
+size = Vector3(2, 1.45, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_bush"]
+albedo_color = Color(0.184314, 0.439216, 0.266667, 1)
+
+[sub_resource type="SphereMesh" id="Decor_bush"]
+radius = 0.6
+height = 0.8
+
+[sub_resource type="CylinderMesh" id="Decor_lamppole"]
+top_radius = 0.07
+bottom_radius = 0.09
+height = 3.2
+
+[sub_resource type="StandardMaterial3D" id="Mat_night_lamp"]
+albedo_color = Color(1, 0.882353, 0.65098, 1)
+
+[sub_resource type="SphereMesh" id="Decor_lampglow"]
+radius = 0.24
+height = 0.48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai45w"]
+albedo_color = Color(0.21568628, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ww2s"]
+size = Vector3(12, 0.4, 18)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h5o24"]
+size = Vector3(12, 0.4, 18)
+
+[sub_resource type="StandardMaterial3D" id="Mat_net"]
+albedo_color = Color(0.87451, 0.913725, 0.917647, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0m45w"]
+size = Vector3(10.1, 1.1, 0.06)
+
+[sub_resource type="BoxMesh" id="Decor_netpost"]
+size = Vector3(0.12, 2.2, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_court_line"]
+albedo_color = Color(0.909804, 0.941176, 0.913725, 1)
+
+[sub_resource type="BoxMesh" id="Decor_courtline_long"]
+size = Vector3(0.045, 0.025, 17)
+
+[sub_resource type="BoxMesh" id="Decor_courtline_short"]
+size = Vector3(11, 0.025, 0.045)
+
+[sub_resource type="Environment" id="Environment_6megm"]
+background_mode = 1
+background_color = Color(0.09411765, 0.14509805, 0.23921569, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.5372549, 0.5921569, 0.70980394, 1)
+ambient_light_energy = 0.35
+
+[sub_resource type="BoxMesh" id="Decor_path"]
+size = Vector3(2.2, 0.18, 3.5)
+
+[sub_resource type="BoxShape3D" id="Decor_pathcol"]
+size = Vector3(2.2, 0.18, 3.5)
+
+[node name="world" type="Node3D" unique_id=1136223292]
+script = ExtResource("1_tcf2h")
+
+[node name="ArenaFloor" type="StaticBody3D" parent="." unique_id=1121763994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ArenaFloor" unique_id=1181040345]
+material_override = SubResource("StandardMaterial3D_h5o24")
+mesh = SubResource("BoxMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArenaFloor" unique_id=1373174733]
+shape = SubResource("BoxShape3D_g312j")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=308016508]
+transform = Transform3D(1, 0, 0, 0, 0.85142964, 0.5244688, 0, -0.5244688, 0.85142964, 0, 15, 16)
+projection = 1
+size = 18.0
+script = ExtResource("2_4717r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1618074169]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+light_color = Color(0.7019608, 0.7882353, 1, 1)
+light_energy = 0.4
+
+[node name="StudyStation" type="StaticBody3D" parent="." unique_id=377170329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 1.4, -4.6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StudyStation" unique_id=1077943138]
+mesh = SubResource("BoxMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StudyStation" unique_id=464215035]
+shape = SubResource("BoxShape3D_vto41")
+
+[node name="DebugUI" type="CanvasLayer" parent="." unique_id=678507549]
+
+[node name="Prompt" type="Label" parent="DebugUI" unique_id=1186773571]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 143.0
+offset_bottom = 43.0
+text = "Press E to Study"
+
+[node name="LocationLabel" type="Label" parent="DebugUI" unique_id=1551427944]
+offset_left = 22.0
+offset_top = 594.0
+offset_right = 261.0
+offset_bottom = 625.0
+theme_override_font_sizes/font_size = 22
+text = "Location: Hostel Room"
+
+[node name="Player" parent="." unique_id=73144493 instance=ExtResource("1_6xmxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.8)
+
+[node name="HostelRoom" type="Node3D" parent="." unique_id=1510474396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="WallBack" type="StaticBody3D" parent="HostelRoom" unique_id=1635601811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -5.85)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallBack" unique_id=971298769]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallBack" unique_id=596892713]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="WallLeft" type="StaticBody3D" parent="HostelRoom" unique_id=632913332]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.85, 1.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallLeft" unique_id=1769163359]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallLeft" unique_id=561548863]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="WallRight" type="StaticBody3D" parent="HostelRoom" unique_id=408924981]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.85, 0.3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallRight" unique_id=1925392399]
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_vto41")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallRight" unique_id=878209049]
+shape = SubResource("BoxShape3D_drthd")
+
+[node name="Furniture" type="Node3D" parent="HostelRoom" unique_id=1965193714]
+
+[node name="PlayerBed" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1466238589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0, -2.9)
+
+[node name="Frame" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=1035043046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("BoxMesh_8ku3a")
+surface_material_override/0 = SubResource("StandardMaterial3D_4717r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=238503021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_dgxqb")
+
+[node name="Mattress" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=692202846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+mesh = SubResource("BoxMesh_vmyvg")
+
+[node name="Pillow" type="MeshInstance3D" parent="HostelRoom/Furniture/PlayerBed" unique_id=548999405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -1.05)
+mesh = SubResource("BoxMesh_31l8x")
+
+[node name="RoommateBed" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1570696394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -2.9)
+
+[node name="Frame" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=1587412602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("BoxMesh_8ku3a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=61391425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_dgxqb")
+
+[node name="Mattress" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=676111629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62, 0)
+mesh = SubResource("BoxMesh_vmyvg")
+
+[node name="Pillow" type="MeshInstance3D" parent="HostelRoom/Furniture/RoommateBed" unique_id=1829362049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81, -1.05)
+mesh = SubResource("BoxMesh_31l8x")
+
+[node name="StudyDesk" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=529213180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -4.6)
+
+[node name="Tabletop" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=847084760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_furniture")
+mesh = SubResource("BoxMesh_dgxqb")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=232277763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="RightLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=145297115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/StudyDesk" unique_id=708652431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_f7e5c")
+
+[node name="StudyDesk2" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=621022613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -4.6)
+
+[node name="Tabletop" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=1936843816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_furniture")
+mesh = SubResource("BoxMesh_dgxqb")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=323324248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="RightLeg" type="MeshInstance3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=1477594304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0.425, 0)
+mesh = SubResource("BoxMesh_pl6wt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/StudyDesk2" unique_id=512567883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_f7e5c")
+
+[node name="Chair" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=1492417564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0, -3.3)
+
+[node name="Backrest" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1329614907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
+mesh = SubResource("BoxMesh_f7e5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/Chair" unique_id=1544718967]
+shape = SubResource("BoxShape3D_jbadn")
+
+[node name="Seat" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=1675187157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("BoxMesh_n2e1w")
+
+[node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair" unique_id=7772785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 0)
+mesh = SubResource("BoxMesh_bqvai")
+
+[node name="Chair2" type="StaticBody3D" parent="HostelRoom/Furniture" unique_id=422081488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8, 0, -3.3)
+
+[node name="Backrest" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=381613461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.3)
+mesh = SubResource("BoxMesh_f7e5c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Furniture/Chair2" unique_id=37428290]
+shape = SubResource("BoxShape3D_jbadn")
+
+[node name="Seat" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=764382992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0)
+mesh = SubResource("BoxMesh_n2e1w")
+
+[node name="Base" type="MeshInstance3D" parent="HostelRoom/Furniture/Chair2" unique_id=554516663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.275, 0)
+mesh = SubResource("BoxMesh_bqvai")
+
+[node name="Roommate" type="StaticBody3D" parent="HostelRoom" unique_id=824645781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2, 1, 0.3)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/Roommate" unique_id=809866507]
+mesh = SubResource("CapsuleMesh_5bk7t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/Roommate" unique_id=1617966453]
+shape = SubResource("CapsuleShape3D_sxkji")
+
+[node name="WallFrontLeft" type="StaticBody3D" parent="HostelRoom" unique_id=940839173]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallFrontLeft" unique_id=813730332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0.3, 5.85)
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_t50cm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallFrontLeft" unique_id=253296390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6, 0.3, 5.85)
+shape = SubResource("BoxShape3D_i6qog")
+
+[node name="WallFrontRight" type="StaticBody3D" parent="HostelRoom" unique_id=1686337042]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HostelRoom/WallFrontRight" unique_id=1833588893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0.3, 5.85)
+material_override = SubResource("Mat_walls")
+mesh = SubResource("BoxMesh_t50cm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HostelRoom/WallFrontRight" unique_id=1042023013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6, 0.3, 5.85)
+shape = SubResource("BoxShape3D_i6qog")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="HostelRoom" unique_id=1656394359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 0)
+light_color = Color(1, 0.81960785, 0.5411765, 1)
+light_energy = 1.5
+omni_range = 7.964
+
+[node name="CommonArea" type="Node3D" parent="." unique_id=1797975341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.026722, 0, -3.931817)
+
+[node name="CommonFloor" type="StaticBody3D" parent="CommonArea" unique_id=610340498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CommonArea/CommonFloor" unique_id=1602665476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.525)
+shape = SubResource("BoxShape3D_5bk7t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CommonArea/CommonFloor" unique_id=1854525475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5253983)
+material_override = SubResource("StandardMaterial3D_fn3g3")
+mesh = SubResource("BoxMesh_jbadn")
+
+[node name="MessArea" type="Node3D" parent="." unique_id=1160320927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.92785, 0, 12.4)
+
+[node name="MessFloor" type="StaticBody3D" parent="MessArea" unique_id=1672334433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/MessFloor" unique_id=701969995]
+shape = SubResource("BoxShape3D_sxkji")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/MessFloor" unique_id=984261984]
+material_override = SubResource("StandardMaterial3D_sc4t8")
+mesh = SubResource("BoxMesh_i6qog")
+
+[node name="FoodCounter" type="StaticBody3D" parent="MessArea" unique_id=1085994629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.098743)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/FoodCounter" unique_id=418129115]
+mesh = SubResource("BoxMesh_57uhy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/FoodCounter" unique_id=2094123946]
+shape = SubResource("BoxShape3D_2ow0q")
+
+[node name="DiningTable" type="StaticBody3D" parent="MessArea" unique_id=199658085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.4, 9.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MessArea/DiningTable" unique_id=596100301]
+shape = SubResource("BoxShape3D_8ku3a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MessArea/DiningTable" unique_id=356983634]
+mesh = SubResource("BoxMesh_2ow0q")
+
+[node name="Corridor" type="Node3D" parent="." unique_id=2002900915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.3786612)
+
+[node name="CorridorFloor" type="StaticBody3D" parent="Corridor" unique_id=645922143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.108486, -0.2, 12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/CorridorFloor" unique_id=363848730]
+material_override = SubResource("StandardMaterial3D_mmdvd")
+mesh = SubResource("BoxMesh_pw4i4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/CorridorFloor" unique_id=1481911216]
+shape = SubResource("BoxShape3D_gekqj")
+
+[node name="WashroomGate" type="StaticBody3D" parent="Corridor" unique_id=594548296]
+
+[node name="BucketNPC_A" type="StaticBody3D" parent="Corridor" unique_id=2117555692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.52211, 0, 15.214121)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_A" unique_id=1460708629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_A" unique_id=1146291132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_B" type="StaticBody3D" parent="Corridor" unique_id=243388792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.550583, 0, 13.965111)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_B" unique_id=1116980020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_B" unique_id=122070459]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_C" type="StaticBody3D" parent="Corridor" unique_id=1210986870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.998495, 0, 15.006826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_C" unique_id=1224570041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_C" unique_id=2128267017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="BucketNPC_D" type="StaticBody3D" parent="Corridor" unique_id=560407796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.634123, 0, 15.006826)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/BucketNPC_D" unique_id=1385827298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_sxkji")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/BucketNPC_D" unique_id=1685435325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_vto41")
+
+[node name="Door01" type="StaticBody3D" parent="Corridor" unique_id=1446048244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7698298, 0.956882, 3.5434275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door01" unique_id=830842902]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door01" unique_id=952573204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.204097, 0, 4.491851)
+mesh = SubResource("BoxMesh_gekqj")
+
+[node name="Door02" type="StaticBody3D" parent="Corridor" unique_id=1999200232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.614904, 0.956882, 3.5434275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door02" unique_id=1771618371]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door02" unique_id=1193078408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.204097, 0, 4.491851)
+mesh = SubResource("BoxMesh_gekqj")
+
+[node name="Door03" type="StaticBody3D" parent="Corridor" unique_id=1933926173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.702715, 0.956882, 3.5434275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door03" unique_id=254030550]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door03" unique_id=1299961951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.204097, 0, 4.491851)
+mesh = SubResource("BoxMesh_gekqj")
+
+[node name="Door04" type="StaticBody3D" parent="Corridor" unique_id=1151554098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9846973, 0.956882, 3.5434275)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Corridor/Door04" unique_id=619138559]
+shape = SubResource("BoxShape3D_vmyvg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Corridor/Door04" unique_id=285525636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.204097, 0, 4.491851)
+mesh = SubResource("BoxMesh_gekqj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Corridor" unique_id=1694270322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.980726, 0, 5.5868444)
+light_color = Color(1, 0.8784314, 0.6509804, 1)
+light_energy = 1.5
+omni_range = 10.209
+
+[node name="ThomsonLawn" type="Node3D" parent="." unique_id=2128105543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.346684, 0, 11.223869)
+
+[node name="LawnFloor" type="StaticBody3D" parent="ThomsonLawn" unique_id=1431890206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ThomsonLawn/LawnFloor" unique_id=1925618070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.846, 0, 0)
+material_override = SubResource("StandardMaterial3D_tcf2h")
+mesh = SubResource("BoxMesh_jdf6e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/LawnFloor" unique_id=1178176486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.845, 0, 0)
+shape = SubResource("BoxShape3D_4717r")
+
+[node name="LawnInteractionPoint" type="Node3D" parent="ThomsonLawn" unique_id=1486960870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.85, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ThomsonLawn/LawnInteractionPoint" unique_id=1895148536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("CylinderMesh_5bk7t")
+
+[node name="FlagCloth" type="MeshInstance3D" parent="ThomsonLawn/LawnInteractionPoint" unique_id=1713226758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 2.25, 0)
+material_override = SubResource("Mat_flag")
+mesh = SubResource("Decor_flagcloth")
+
+[node name="LawnRoad" type="MeshInstance3D" parent="ThomsonLawn" unique_id=657188955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.85, 0.04, 0)
+material_override = SubResource("Mat_path")
+mesh = SubResource("Decor_road")
+
+[node name="GardenDecor" type="Node3D" parent="ThomsonLawn" unique_id=691202578]
+
+[node name="Tree01" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1451100361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=1360772906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=558866775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=1443163816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree01" unique_id=1844752967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree02" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=535229690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=142382783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=826224204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=2022814172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree02" unique_id=189362704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree03" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1435657541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=164030241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1296300241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1622046580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree03" unique_id=1192537361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="Tree04" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=2101727362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -7)
+
+[node name="Trunk" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=376958328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("Mat_trunk")
+mesh = SubResource("Decor_trunk")
+
+[node name="LeavesBottom" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=1715519146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+material_override = SubResource("Mat_leaf_dark")
+mesh = SubResource("Decor_leavesbottom")
+
+[node name="LeavesTop" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=509264568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.35, 0)
+material_override = SubResource("Mat_leaf_light")
+mesh = SubResource("Decor_leavestop")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/Tree04" unique_id=511393954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("Decor_trunkcol")
+
+[node name="GardenBench01" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=1964526930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 4)
+
+[node name="Seat" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=1234276038]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchseat")
+
+[node name="Backrest" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=1191985876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0.3)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchback")
+
+[node name="LeftSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=542982619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="RightSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=626731790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/GardenBench01" unique_id=1313650348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0.1)
+shape = SubResource("Decor_benchcol")
+
+[node name="GardenBench02" type="StaticBody3D" parent="ThomsonLawn/GardenDecor" unique_id=159566253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -4)
+
+[node name="Seat" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=11798277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, 0)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchseat")
+
+[node name="Backrest" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=968158942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0.3)
+material_override = SubResource("Mat_wood")
+mesh = SubResource("Decor_benchback")
+
+[node name="LeftSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=1826516782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="RightSupport" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=672724180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 0.325, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_benchsupport")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThomsonLawn/GardenDecor/GardenBench02" unique_id=782729643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.725, 0.1)
+shape = SubResource("Decor_benchcol")
+
+[node name="Bush01" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=1063558769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.4, 5)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush02" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=832457084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.4, -7)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush03" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=443505976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0.4, 5)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush04" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=1649835600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.4, 6)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="Bush05" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor" unique_id=455499403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.4, -4)
+material_override = SubResource("Mat_bush")
+mesh = SubResource("Decor_bush")
+
+[node name="LawnLamp01" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=459584538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=1146359721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=1067119433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp01" unique_id=1291691341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="LawnLamp02" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=302100715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=1249429341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=1545155649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp02" unique_id=371587105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="LawnLamp03" type="Node3D" parent="ThomsonLawn/GardenDecor" unique_id=1796382517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -8)
+
+[node name="Pole" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=784711105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+material_override = SubResource("Mat_metal")
+mesh = SubResource("Decor_lamppole")
+
+[node name="Lantern" type="MeshInstance3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=1853904212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3, 0)
+material_override = SubResource("Mat_night_lamp")
+mesh = SubResource("Decor_lampglow")
+
+[node name="Light" type="OmniLight3D" parent="ThomsonLawn/GardenDecor/LawnLamp03" unique_id=523030127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, 0)
+light_color = Color(1, 0.858824, 0.65098, 1)
+light_energy = 1.3
+omni_range = 8.0
+
+[node name="BadmintonCourt" type="Node3D" parent="." unique_id=1290905047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.70783, 0, 10.850781)
+
+[node name="CourtFloor" type="StaticBody3D" parent="BadmintonCourt" unique_id=659825147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BadmintonCourt/CourtFloor" unique_id=765991861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7523441, 0, 0)
+material_override = SubResource("StandardMaterial3D_ai45w")
+mesh = SubResource("BoxMesh_7ww2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BadmintonCourt/CourtFloor" unique_id=1147965823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.752, 0, 0)
+shape = SubResource("BoxShape3D_h5o24")
+
+[node name="BadmintonInteractionPoint" type="Node3D" parent="BadmintonCourt" unique_id=966166908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=745922394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0)
+material_override = SubResource("Mat_net")
+mesh = SubResource("BoxMesh_0m45w")
+
+[node name="LeftPost" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=1494340302]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15, 1.1, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("Decor_netpost")
+
+[node name="RightPost" type="MeshInstance3D" parent="BadmintonCourt/BadmintonInteractionPoint" unique_id=2042379906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15, 1.1, 0)
+material_override = SubResource("Mat_post")
+mesh = SubResource("Decor_netpost")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="BadmintonCourt" unique_id=322495255]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.69146, 0, -4.676737)
+light_color = Color(0.8627451, 0.92156863, 1, 1)
+light_energy = 1.952
+omni_range = 12.915
+
+[node name="CourtMarkings" type="Node3D" parent="BadmintonCourt" unique_id=910260192]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.752, 0.025, 0)
+
+[node name="LineLeft" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=2085299258]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.45, 0, 0)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineLeft2" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=1799796166]
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineRight" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=1452876909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0, 0)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_long")
+
+[node name="LineTop" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=1339371498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.45)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="LineBottom" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=968884991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.45)
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="LineMid" type="MeshInstance3D" parent="BadmintonCourt/CourtMarkings" unique_id=290761504]
+material_override = SubResource("Mat_court_line")
+mesh = SubResource("Decor_courtline_short")
+
+[node name="WorldBoundaries" type="Node3D" parent="." unique_id=1394560856]
+script = ExtResource("4_h5o24")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=657647596]
+environment = SubResource("Environment_6megm")
+
+[node name="CourtPath" type="StaticBody3D" parent="." unique_id=2015649862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.5, -0.07, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CourtPath" unique_id=137162002]
+material_override = SubResource("Mat_path")
+mesh = SubResource("Decor_path")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CourtPath" unique_id=1283913408]
+shape = SubResource("Decor_pathcol")
