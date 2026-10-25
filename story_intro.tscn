@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ci28mtlc2i1hr"]
+
+[ext_resource type="Script" uid="uid://b7nyxlt0pcls0" path="res://story_intro.gd" id="1_5g8uu"]
+[ext_resource type="FontFile" uid="uid://cg5x5qspnwuqh" path="res://Internet Friends.ttf" id="2_noxhh"]
+[ext_resource type="AudioStream" uid="uid://bltgovll50x5f" path="res://Piano Pranks.mp3" id="2_tblw1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4b7ct"]
+bg_color = Color(0.14117648, 0.1254902, 0.16862746, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 18.0
+expand_margin_top = 18.0
+expand_margin_right = 18.0
+expand_margin_bottom = 18.0
+
+[node name="StoryIntro" type="Control" unique_id=1319581752]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5g8uu")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2113409276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.101960786, 0.16862746, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=534883645]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 28
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 28
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=225694067]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HeaderLabel" type="Label" parent="MarginContainer/Content" unique_id=328771043]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_noxhh")
+vertical_alignment = 1
+
+[node name="PanelImage" type="TextureRect" parent="MarginContainer/Content" unique_id=628086150]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 3
+stretch_mode = 3
+
+[node name="CaptionPanel" type="PanelContainer" parent="MarginContainer/Content" unique_id=1746396784]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4b7ct")
+
+[node name="CaptionLabel" type="Label" parent="MarginContainer/Content/CaptionPanel" unique_id=274206977]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95686275, 0.9098039, 0.8156863, 1)
+theme_override_fonts/font = ExtResource("2_noxhh")
+theme_override_font_sizes/font_size = 19
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/Content" unique_id=88329740]
+layout_mode = 2
+alignment = 2
+
+[node name="SkipButton" type="Button" parent="MarginContainer/Content/ButtonRow" unique_id=1102828208]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "Skip Intro"
+
+[node name="Spacer" type="Control" parent="MarginContainer/Content/ButtonRow" unique_id=505527318]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NextButton" type="Button" parent="MarginContainer/Content/ButtonRow" unique_id=390114959]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+text = "Next"
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=354280476]
+stream = ExtResource("2_tblw1")
+autoplay = true

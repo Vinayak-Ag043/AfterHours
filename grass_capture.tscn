@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cuj4bqp72sjsf"]
+
+[ext_resource type="Script" uid="uid://dfqnh6f3pdsb1" path="res://minigames/grass_capture.gd" id="1_dt74p"]
+
+[node name="GrassCapture" type="Node2D" unique_id=1996125861]
+script = ExtResource("1_dt74p")

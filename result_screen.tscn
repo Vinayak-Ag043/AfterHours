@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dkyxxihoud2yv"]
+
+[ext_resource type="Script" uid="uid://krlhs51y1oxp" path="res://result_screen.gd" id="1_e2y21"]
+
+[node name="ResultScreen" type="Control" unique_id=359416758]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2y21")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1529168833]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03331235, 0.09053726, 0.34082732, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=808587170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultPanel" type="PanelContainer" parent="CenterContainer" unique_id=1328401589]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="ResultLayout" type="VBoxContainer" parent="CenterContainer/ResultPanel" unique_id=1644012153]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EndingTitle" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=1956272182]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "YOUR NIGHT IS OVER"
+
+[node name="SummaryLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=1829418702]
+layout_mode = 2
+text = "Here's how your night went"
+
+[node name="EnergyLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=1160731647]
+layout_mode = 2
+
+[node name="FoodLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=90651300]
+layout_mode = 2
+
+[node name="MoodLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=1995358985]
+layout_mode = 2
+
+[node name="AssignmentLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=913633821]
+layout_mode = 2
+
+[node name="SleepLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=1062689462]
+layout_mode = 2
+
+[node name="MissionLabel" type="Label" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=114670917]
+layout_mode = 2
+
+[node name="PlayAgainButton" type="Button" parent="CenterContainer/ResultPanel/ResultLayout" unique_id=575173380]
+layout_mode = 2
+text = "PLAY AGAIN"
